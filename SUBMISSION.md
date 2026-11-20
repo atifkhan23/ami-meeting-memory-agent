@@ -1,49 +1,41 @@
-# Submission: AMI Meeting Memory Agent
+# Submission notes
 
-Catalist Media - Agentic AI Intern build test.
+This is my submission for the Catalist Media Agentic AI Intern build test. Below is where each part of the brief
+lives in this repo, so you don't have to dig for it.
 
-## Where to find each deliverable
-
-| Requirement (from the brief) | File |
+| What the brief asked for | Where it is |
 |---|---|
-| Code + README on how to run it | `src/`, `scripts/`, `app.py`, `config.py`, `README.md` |
-| `answers.json` made by the agent (25 answers + TS3012 brief) | `answers.json` (copy of `outputs/answers.json`) |
-| One-page write-up (architecture, model vs code, tools and where they broke, production) | `outputs/technical_writeup.md` |
-| Full technical report with diagrams, LLM usage, workflow, results | `outputs/AMI_Meeting_Memory_Agent_Report.pdf` (12 pages) |
-| TS3012 pre-meeting brief (also inside answers.json) | `outputs/ts3012_brief.md` |
-| 10+ own questions with transcript-verified answers, scored | `data/eval_questions.json`, `data/eval_manual_review.json`, `outputs/evaluation_report.md` |
+| Code and a README on how to run it | `src/`, `scripts/`, `app.py`, `README.md` |
+| answers.json made by the agent (25 answers + the TS3012 brief) | `outputs/answers.json` |
+| About a one-page write-up | `outputs/technical_writeup.md` |
+| My own 10+ questions, checked against the transcripts, and the scores | `data/eval_questions.json`, `outputs/evaluation_report.md` |
 | Three questions the agent got wrong, and why | `outputs/failure_analysis.md` |
-| Cost and time to ingest 1,000 meetings | `outputs/cost_estimate.md` |
-| Walkthrough / live demo plan | `outputs/demo_script.md`; run `streamlit run app.py` |
-| Evidence of agent behaviour (every step per question) | `outputs/traces/Q01.json` ... `Q25.json` |
-| Measured LLM usage (provider, model, tokens, latency) | `logs/llm_usage.jsonl` |
+| Cost and time for 1,000 meetings | `outputs/cost_estimate.md` |
+| Walkthrough | `outputs/demo_script.md` (I'm also happy to demo live) |
 
-## Results in brief
+I also wrote a longer report with the architecture diagrams, the LLMs I used and why, and a walkthrough of
+the results: `outputs/AMI_Meeting_Memory_Agent_Report.pdf`. The full step-by-step log of what the agent did for
+each question is in `outputs/traces/`.
 
-- 138/138 meetings ingested (676,745 words, 35 teams), 0 errors; 4,334 chunks; 3,412 memory records.
-- 25/25 questions answered with 58 citations; all quotes re-validated verbatim (0 problems).
-- TS3012 brief built as of before meeting d; 11/11 citations valid.
-- Own evaluation (12 questions): 8 correct, 3 partial, 1 incorrect; citation exact-match 100%.
-- 7 LLMs used across Gemini and Groq with logged fallback; actual cost $0 (free tiers); ~$16 per 1,000 meetings at list prices.
-- 32 automated tests passing.
+## Where things stand
 
-## Quick start
+- All 138 meetings are ingested. The 25 questions are answered with 58 quotes, and every quote was checked word
+  for word against the transcripts.
+- On the 12 questions I wrote and checked myself, the agent got 8 right, 3 partly right and 1 wrong.
+- The best Gemini models were unavailable or rate-limited for most of the day I built this, so the answers were
+  written by the lighter flash-lite models. I've explained the effect of that in the failure analysis.
+
+## Running it
+
+The commands are in `README.md`. The short version:
 
 ```bash
-python -m venv .venv
-.venv\Scripts\activate            # Windows   (macOS/Linux: source .venv/bin/activate)
-pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
-python -m pytest -q               # 32 tests, offline
-streamlit run app.py              # demo UI on the included, pre-built memory store
+python -m pytest -q          # tests run offline
+streamlit run app.py         # demo
 ```
 
-The package includes the pre-built memory store (`store/`) and the LLM response cache, so the demo and
-`python scripts/run_questions.py` work immediately: cached answers replay without API keys. To call the LLMs
-again (new questions, re-ingestion), copy `.env.example` to `.env` and add `GEMINI_API_KEY` / `GROQ_API_KEY`.
-All commands are in `README.md`.
+The memory store isn't committed to git because it's a generated 43 MB folder. You can rebuild it with
+`python scripts/ingest.py`, or use the zip I sent by email, which includes it so the demo works straight away.
 
-## Data and licence
-
-The transcripts in `data/transcripts/` are from the AMI Meeting Corpus (University of Edinburgh and partners),
-CC BY 4.0, as reformatted by Catalist (see `data/CREDITS.txt`).
+Transcripts are from the AMI Meeting Corpus (University of Edinburgh and partners), CC BY 4.0.
