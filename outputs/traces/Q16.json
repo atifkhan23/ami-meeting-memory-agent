@@ -1,0 +1,185 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116595.61,
+    "team_id": "TS3010",
+    "meetings": [
+      "TS3010a",
+      "TS3010b",
+      "TS3010c",
+      "TS3010d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116595.61,
+    "answer_parts": [
+      "The project manager's preferred navigation control",
+      "The replacement navigation control in the final design",
+      "The additional feature or component sacrificed to meet the budget"
+    ],
+    "queries": [
+      "Team TS3010's project manager favoured a particular kind of control for navigating. What was it, what replaced it in the final costed design, and what else was given up at the same time to reach the budget?",
+      "TS3010 project manager navigation control",
+      "TS3010 navigation wheel trackball",
+      "TS3010 budget costed design changes",
+      "TS3010 what did we cut for budget",
+      "TS3010 navigation control replacement"
+    ],
+    "temporal": true,
+    "topics": [
+      "navigation control",
+      "budget constraints"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116596.17,
+    "round": 1,
+    "queries": [
+      "Team TS3010's project manager favoured a particular kind of control for navigating. What was it, what replaced it in the final costed design, and what else was given up at the same time to reach the budget?",
+      "TS3010 project manager navigation control",
+      "TS3010 navigation wheel trackball",
+      "TS3010 budget costed design changes",
+      "TS3010 what did we cut for budget",
+      "TS3010 navigation control replacement"
+    ],
+    "new_chunks": 22,
+    "total_chunks": 22,
+    "meetings": [
+      "TS3010a",
+      "TS3010b",
+      "TS3010c",
+      "TS3010d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 342,
+    "top_chunks": [
+      [
+        "TS3010c-c010",
+        0.1417,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3010b-c009",
+        0.1108,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3010b-c018",
+        0.0935,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3010a-c002",
+        0.0809,
+        [
+          "vector"
+        ]
+      ],
+      [
+        "TS3010d-c010",
+        0.0798,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3010d-c014",
+        0.0798,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3010c-c013",
+        0.0643,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3010a-c005",
+        0.0623,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116605.4,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "The project manager (Speaker A) initially favoured a small joystick for navigation. To reduce costs in the final design, the joystick was replaced with regular push-buttons, and the special colour feature was also given up to meet the budget.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116605.43,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "TS3010c",
+        "valid": true,
+        "error": "",
+        "snapped": true,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "TS3010d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116607.52,
+    "verdicts": {},
+    "unsupported_claims": [],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116607.52,
+    "answer": "The project manager (Speaker A) initially favoured a small joystick for navigation. To reduce costs in the final design, the joystick was replaced with regular push-buttons, and the special colour feature was also given up to meet the budget.",
+    "citations": [
+      {
+        "meeting_id": "TS3010c",
+        "quote": "joystick is better. A small one. So, please look at it.",
+        "turn": 222,
+        "speaker": "A",
+        "supports": "The project manager's preferred navigation control",
+        "supported": null
+      },
+      {
+        "meeting_id": "TS3010d",
+        "quote": "No joystick. Push-buttons. No special colour.",
+        "turn": 250,
+        "speaker": "A",
+        "supports": "The replacement navigation control and the additional sacrificed feature",
+        "supported": null
+      }
+    ],
+    "seconds": 11.9
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "_note": "Human review of the agent's evaluation answers against the transcript-verified ground truth (2026-11-20). Overrides the regex verdict where the regex was too strict or too lenient; the reason is recorded.",
+  "E01": {"verdict": "correct", "note": "Names B, the switch to plastic on going over budget, and the final plastic case. Omits that A and D objected (not asked)."},
+  "E02": {"verdict": "correct", "note": "All four facts present; the regex missed the phrasing 'nine pounds and twenty pence'."},
+  "E03": {"verdict": "correct", "note": "C, sales/market grounds ('four million sales audience'), LCD and speech recognition both cut. Regex did not accept 'sales'."},
+  "E04": {"verdict": "partial", "note": "Scroll wheel dropped and touch screen kept are right; misses that speech recognition and the speaker/microphone were dropped. The c-meeting gold turn was not retrieved."},
+  "E05": {"verdict": "correct", "note": "D, and correctly states no follow-up was reported; regex missed 'no follow-up report'."},
+  "E06": {"verdict": "correct", "note": ""},
+  "E07": {"verdict": "partial", "note": "Regex too lenient. Whistle finder by D is right and speech tech is in the design, but it labels Speaker C as project manager from a noisy role table, cites C's loud-movie concern instead of A's 'how many people can whistle' concern, and leaves the voice-recognition alternative vague."},
+  "E08": {"verdict": "partial", "note": "A proposed and D was sceptical are right, but the temporal conclusion is wrong: it says the scepticism was gone by meeting d, while Speaker C was still 'not swallowing the fruit' at the final evaluation."},
+  "E09": {"verdict": "correct", "note": "Three-meeting trail fully right."},
+  "E10": {"verdict": "correct", "note": "Indirect reference resolved to the c-meeting concept; 10.7 vs 12.5 correct."},
+  "E11": {"verdict": "incorrect", "note": "Abstention failure: IS1005 has no meeting d, but the agent answered with the 12.50 budget target from meetings a/b instead of saying meeting d is missing."},
+  "E12": {"verdict": "correct", "note": "Rejected the false premise (no wooden case; titanium)."}
+}

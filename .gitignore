@@ -1,0 +1,24 @@
+# Secrets - never commit
+.env
+
+# Environment / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated memory store (rebuild with: python scripts/ingest.py)
+store/
+
+# Logs: keep only the measured LLM usage ledger (used by the cost estimate)
+logs/*
+!logs/llm_usage.jsonl
+
+# Dataset (CC BY 4.0) - place it in data/transcripts/, see README "Data"
+data/transcripts/
+Catalist_AI_Intern_Build_Test_Data/
+Catalist_Agentic_AI_Intern_Build_Test.pdf
+
+# Personal presentation notes
+outputs/loom_presentation_report.md
+outputs/simple_explanation.md

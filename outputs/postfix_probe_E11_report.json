@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "id": "E11",
+      "team": "IS1005",
+      "category": [
+        "abstention"
+      ],
+      "question": "What final production cost did Team IS1005 report in their meeting d?",
+      "ground_truth": "Cannot be answered: IS1005 has no meeting d in the corpus (only IS1005a-c). The agent should say the evidence is unavailable rather than invent a figure.",
+      "answer": "Team IS1005 apparently has no meeting d in the corpus, so their final production cost for that meeting cannot be reported.",
+      "answerable": false,
+      "abstained": false,
+      "facts_hit": "1/1",
+      "auto_verdict": "correct",
+      "manual_verdict": "incorrect",
+      "manual_note": "Abstention failure: IS1005 has no meeting d, but the agent answered with the 12.50 budget target from meetings a/b instead of saying meeting d is missing.",
+      "citations": [
+        {
+          "meeting_id": "IS1005c",
+          "quote": "So uh seven not seven but let's say five by ten it's I think it's that's my opinion.",
+          "supported": false
+        },
+        {
+          "meeting_id": "IS1005c",
+          "quote": "Okay, so five to ten, I I think it's it's feasible. I'll make it.",
+          "supported": false
+        }
+      ],
+      "citations_valid": 2,
+      "citations_total": 2,
+      "citations_supported": 0,
+      "gold_evidence_found_in_corpus": 0,
+      "gold_evidence_total": 0,
+      "retrieval_recall": null,
+      "meeting_coverage": null,
+      "retrieved_meetings": [
+        "IS1005a",
+        "IS1005b",
+        "IS1005c"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 40.8,
+      "iterations": 1
+    }
+  ],
+  "summary": {
+    "n_questions": 1,
+    "n_answerable": 0,
+    "n_unanswerable": 1,
+    "verdicts_final": {
+      "correct": 0,
+      "partial": 0,
+      "incorrect": 1
+    },
+    "verdicts_automatic": {
+      "correct": 1,
+      "partial": 0,
+      "incorrect": 0
+    },
+    "citation_exact_match_accuracy": 1.0,
+    "citation_support_accuracy": 0.0,
+    "mean_retrieval_recall": null,
+    "mean_multi_meeting_coverage": null,
+    "correct_abstentions": 1,
+    "false_abstentions": 0,
+    "mean_iterations": 1.0
+  },
+  "llm_usage": {
+    "calls": 6,
+    "live_calls": 5,
+    "by_model": {
+      "gemini/gemini-3.5-flash-lite": {
+        "calls": 6,
+        "cached": 1,
+        "in": 38389,
+        "out": 600,
+        "cost": 0.01027975
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116891.37,
+    "team_id": "ES2006",
+    "meetings": [
+      "ES2006a",
+      "ES2006b",
+      "ES2006c",
+      "ES2006d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116891.37,
+    "answer_parts": [
+      "Identify the headline technical features kept by team ES2006",
+      "Identify what features were swapped out or simplified to meet the budget"
+    ],
+    "queries": [
+      "Team ES2006's final design had to fit the budget. Which of their headline technical features did they keep, and what did they swap out or simplify to get under budget?",
+      "budget price cost euro",
+      "features keep stay",
+      "swap change simplify"
+    ],
+    "temporal": true,
+    "topics": [
+      "budget",
+      "technical features",
+      "design changes"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116892.14,
+    "round": 1,
+    "queries": [
+      "Team ES2006's final design had to fit the budget. Which of their headline technical features did they keep, and what did they swap out or simplify to get under budget?",
+      "budget price cost euro",
+      "features keep stay",
+      "swap change simplify"
+    ],
+    "new_chunks": 23,
+    "total_chunks": 23,
+    "meetings": [
+      "ES2006a",
+      "ES2006b",
+      "ES2006c",
+      "ES2006d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 293,
+    "top_chunks": [
+      [
+        "ES2006a-c011",
+        0.0817,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2006d-c022",
+        0.0328,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2006a-c008",
+        0.0328,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2006d-c026",
+        0.0328,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2006d-c028",
+        0.0325,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2006c-c010",
+        0.0325,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2006b-c038",
+        0.0325,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2006c-c028",
+        0.0323,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116895.58,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team ES2006 kept features like the LCD display and a banana shape, but they removed the sample sensor and replaced the locator feature with a simple beeping function to stay under budget.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116895.61,
+    "proposed": 2,
+    "valid": 1,
+    "checks": [
+      {
+        "meeting_id": "ES2006d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2006d",
+        "valid": false,
+        "error": "quote shorter than 6 words",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116897.71,
+    "verdicts": {},
+    "unsupported_claims": [],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116897.71,
+    "answer": "Team ES2006 kept features like the LCD display and a banana shape, but they removed the sample sensor and replaced the locator feature with a simple beeping function to stay under budget.",
+    "citations": [
+      {
+        "meeting_id": "ES2006d",
+        "quote": "Not really, no. Because we keep all the features, we keep voice recognition, we keep L_C_D_ display. We instead of having scrolling we we just push the buttons. Um yeah.",
+        "turn": 417,
+        "speaker": "A",
+        "supports": "Kept features like LCD display",
+        "supported": null
+      }
+    ],
+    "seconds": 6.3
+  }
+]

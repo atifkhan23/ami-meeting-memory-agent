@@ -1,0 +1,214 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116571.34,
+    "team_id": "IS1009",
+    "meetings": [
+      "IS1009a",
+      "IS1009b",
+      "IS1009c",
+      "IS1009d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116571.34,
+    "answer_parts": [
+      "Identify the feature that was pending cost research.",
+      "Determine the final total cost reached by the team.",
+      "Confirm whether the pending feature was included in that final total."
+    ],
+    "queries": [
+      "Team IS1009 left one feature pending more research into its cost. In their final costing, what total did they reach, and was that feature included in the total?",
+      "IS1009 cost research pending",
+      "IS1009 final cost total",
+      "IS1009 feature included cost",
+      "IS1009 budget calculation",
+      "IS1009 price estimation"
+    ],
+    "temporal": true,
+    "topics": [
+      "costing",
+      "budget",
+      "features"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116571.89,
+    "round": 1,
+    "queries": [
+      "Team IS1009 left one feature pending more research into its cost. In their final costing, what total did they reach, and was that feature included in the total?",
+      "IS1009 cost research pending",
+      "IS1009 final cost total",
+      "IS1009 feature included cost",
+      "IS1009 budget calculation",
+      "IS1009 price estimation"
+    ],
+    "new_chunks": 24,
+    "total_chunks": 24,
+    "meetings": [
+      "IS1009a",
+      "IS1009b",
+      "IS1009c",
+      "IS1009d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 353,
+    "top_chunks": [
+      [
+        "IS1009b-c006",
+        0.2033,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1009a-c003",
+        0.1918,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1009d-c020",
+        0.0916,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1009c-c033",
+        0.0656,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1009d-c015",
+        0.0651,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1009b-c047",
+        0.0587,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1009b-c024",
+        0.0477,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1009d-c025",
+        0.0457,
+        [
+          "bm25",
+          "vector"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116576.04,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team IS1009 left speech recognition pending more research into its cost in meeting C. In their final costing in meeting D, they reached a total of 8.2 euros, and the voice recognition feature was not included in that initial budget calculation, though they noted they still had remaining room in their budget to cover it.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116576.22,
+    "proposed": 3,
+    "valid": 3,
+    "checks": [
+      {
+        "meeting_id": "IS1009c",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "IS1009d",
+        "valid": true,
+        "error": "",
+        "snapped": true,
+        "similarity": 0.963
+      },
+      {
+        "meeting_id": "IS1009d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116578.53,
+    "verdicts": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "unsupported_claims": [
+      "though they noted they still had remaining room in their budget to cover it"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116580.71,
+    "before": "Team IS1009 left speech recognition pending more research into its cost in meeting C. In their final costing in meeting D, they reached a total of 8.2 euros, and the voice recognition feature was not included in that initial budget calculation, though they noted they still had remaining room in their budget to cover it.",
+    "after": "In their final costing in meeting D, team IS1009 reached a total of 8.2 euros. The voice recognition feature was apparently not included in that initial financing calculation.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116580.71,
+    "answer": "In their final costing in meeting D, team IS1009 reached a total of 8.2 euros. The voice recognition feature was apparently not included in that initial financing calculation.",
+    "citations": [
+      {
+        "meeting_id": "IS1009c",
+        "quote": "Okay, so why don't we put down speech recognition if possible pending some more research from our industrial engineer on how expensive that is.",
+        "turn": 190,
+        "speaker": "D",
+        "supports": "Identify the feature that was pending cost research.",
+        "supported": true
+      },
+      {
+        "meeting_id": "IS1009d",
+        "quote": "Eight point two, right? So, we looks like we are well within budget.",
+        "turn": 209,
+        "speaker": "A",
+        "supports": "Determine the final total cost reached by the team.",
+        "supported": true
+      },
+      {
+        "meeting_id": "IS1009d",
+        "quote": "Um I just realised one thing. In the financing there was no room for our voice recogniser.",
+        "turn": 241,
+        "speaker": "A",
+        "supports": "Confirm whether the pending feature was included in that final total.",
+        "supported": true
+      }
+    ],
+    "seconds": 9.4
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "report": {
+    "discovered": 138,
+    "added": 0,
+    "updated": 0,
+    "vectors_backfilled": 0,
+    "skipped_unchanged": 138,
+    "errors": [],
+    "chunks_written": 0,
+    "seconds": 4.05,
+    "missing_meetings": {
+      "IS1002": [
+        "a"
+      ],
+      "IS1005": [
+        "d"
+      ]
+    }
+  },
+  "store": {
+    "meetings": 138,
+    "teams": 35,
+    "turns": 48148,
+    "words": 676745,
+    "chunks": 4334,
+    "memory_records": 3412,
+    "meetings_extracted": 138,
+    "teams_reconciled": 35,
+    "ingest_errors": 0
+  },
+  "timings": {
+    "deterministic_ingest_s": 4.0,
+    "extraction_s": 0.3,
+    "reconcile_s": 459.3
+  },
+  "llm_usage": {
+    "calls": 10,
+    "live_calls": 10,
+    "by_model": {
+      "gemini/gemini-3.1-flash-lite": {
+        "calls": 6,
+        "cached": 0,
+        "in": 33320,
+        "out": 41906,
+        "cost": 0.071189
+      },
+      "gemini/gemini-3.5-flash-lite": {
+        "calls": 4,
+        "cached": 0,
+        "in": 15642,
+        "out": 9148,
+        "cost": 0.017632500000000002
+      }
+    }
+  }
+}

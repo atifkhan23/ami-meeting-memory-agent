@@ -1,0 +1,213 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116881.33,
+    "team_id": "ES2010",
+    "meetings": [
+      "ES2010a",
+      "ES2010b",
+      "ES2010c",
+      "ES2010d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116881.33,
+    "answer_parts": [
+      "Who suggested a lithium battery",
+      "What another member preferred instead and why",
+      "What was the final choice for the battery"
+    ],
+    "queries": [
+      "Team ES2010 discussed several battery options. Who suggested a lithium battery, what did another member prefer instead and why, and what was the final choice?",
+      "lithium battery",
+      "rechargeable batteries",
+      "solar power",
+      "battery life"
+    ],
+    "temporal": true,
+    "topics": [
+      "battery options"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116882.01,
+    "round": 1,
+    "queries": [
+      "Team ES2010 discussed several battery options. Who suggested a lithium battery, what did another member prefer instead and why, and what was the final choice?",
+      "lithium battery",
+      "rechargeable batteries",
+      "solar power",
+      "battery life"
+    ],
+    "new_chunks": 13,
+    "total_chunks": 13,
+    "meetings": [
+      "ES2010a",
+      "ES2010b",
+      "ES2010c",
+      "ES2010d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 199,
+    "top_chunks": [
+      [
+        "ES2010d-c007",
+        0.2232,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2010b-c021",
+        0.1855,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2010a-c010",
+        0.1724,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2010c-c026",
+        0.1617,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2010b-c022",
+        0.0909,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2010d-c008",
+        0.0631,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2010c-c016",
+        0.0492,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2010c-c015",
+        0.0489,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116885.72,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Speaker B (the User Interface Designer) initially suggested using a small lithium battery because of its longer life and availability. Another member, Speaker D (the Marketing Expert), preferred AAA batteries instead, noting they are lighter and more come in a package. However, the team ultimately chose a lithium battery during the final pricing discussion.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116885.78,
+    "proposed": 3,
+    "valid": 3,
+    "checks": [
+      {
+        "meeting_id": "ES2010c",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2010c",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2010d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116888.59,
+    "verdicts": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "unsupported_claims": [
+      "Speaker B initially suggested using a small lithium battery because of its longer life and availability",
+      "Speaker D preferred AAA batteries instead, noting they are lighter and more come in a package",
+      "the team ultimately chose a lithium battery during the final pricing discussion"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116891.37,
+    "before": "Speaker B (the User Interface Designer) initially suggested using a small lithium battery because of its longer life and availability. Another member, Speaker D (the Marketing Expert), preferred AAA batteries instead, noting they are lighter and more come in a package. However, the team ultimately chose a lithium battery during the final pricing discussion.",
+    "after": "Speaker B suggested a lithium battery, while Speaker D preferred AAA batteries because they would be lighter. The team ultimately chose a lithium battery.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116891.37,
+    "answer": "Speaker B suggested a lithium battery, while Speaker D preferred AAA batteries because they would be lighter. The team ultimately chose a lithium battery.",
+    "citations": [
+      {
+        "meeting_id": "ES2010c",
+        "quote": "I think, well, we could d r do two or we could do one small lithium, 'cause you know the lithium batteries are doing quite well in most other electronic products, right?",
+        "turn": 231,
+        "speaker": "B",
+        "supports": "Who suggested a lithium battery",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2010c",
+        "quote": "I think triple A_, it'll be lighter.",
+        "turn": 227,
+        "speaker": "D",
+        "supports": "What another member preferred instead and why",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2010d",
+        "quote": "Yeah, let's let's do a lithium.",
+        "turn": 145,
+        "speaker": "D",
+        "supports": "What was the final choice for the battery",
+        "supported": true
+      }
+    ],
+    "seconds": 10.0
+  }
+]

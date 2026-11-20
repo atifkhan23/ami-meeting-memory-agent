@@ -1,0 +1,200 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116827.27,
+    "team_id": "IS1003",
+    "meetings": [
+      "IS1003a",
+      "IS1003b",
+      "IS1003c",
+      "IS1003d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116827.28,
+    "answer_parts": [
+      "the initial natural material picked for the case",
+      "the material that replaced it",
+      "who suggested the switch"
+    ],
+    "queries": [
+      "Team IS1003 picked a natural material for the case and later changed it. What was the material, what replaced it, and who suggested the switch?",
+      "wooden case wood material",
+      "plastic instead of wood",
+      "change the material to plastic",
+      "material for the case"
+    ],
+    "temporal": true,
+    "topics": [
+      "casing material"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116827.74,
+    "round": 1,
+    "queries": [
+      "Team IS1003 picked a natural material for the case and later changed it. What was the material, what replaced it, and who suggested the switch?",
+      "wooden case wood material",
+      "plastic instead of wood",
+      "change the material to plastic",
+      "material for the case"
+    ],
+    "new_chunks": 17,
+    "total_chunks": 17,
+    "meetings": [
+      "IS1003a",
+      "IS1003b",
+      "IS1003c",
+      "IS1003d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 331,
+    "top_chunks": [
+      [
+        "IS1003c-c018",
+        0.1432,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1003d-c021",
+        0.1277,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1003c-c016",
+        0.1119,
+        [
+          "vector"
+        ]
+      ],
+      [
+        "IS1003c-c025",
+        0.0953,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1003a-c003",
+        0.0786,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1003d-c019",
+        0.065,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1003c-c019",
+        0.063,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1003b-c011",
+        0.0463,
+        [
+          "bm25",
+          "vector"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116831.09,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team IS1003 initially picked wood as the natural material for the remote control case, but Industrial Designer Speaker B suggested switching to plastic to save costs. Plastic ultimately replaced the wood material.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116831.12,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "IS1003c",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "IS1003d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116833.2,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "Industrial Designer Speaker B suggested switching to plastic to save costs.",
+      "Plastic ultimately replaced the wood material."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116836.19,
+    "proposed": 2,
+    "added": 0,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116838.01,
+    "before": "Team IS1003 initially picked wood as the natural material for the remote control case, but Industrial Designer Speaker B suggested switching to plastic to save costs. Plastic ultimately replaced the wood material.",
+    "after": "Team IS1003 initially picked wood as the natural material for the remote control case, and then Industrial Designer Speaker B apparently suggested transforming the wood into plastic.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116838.01,
+    "answer": "Team IS1003 initially picked wood as the natural material for the remote control case, and then Industrial Designer Speaker B apparently suggested transforming the wood into plastic.",
+    "citations": [
+      {
+        "meeting_id": "IS1003c",
+        "quote": "Th The feeling is natural, so maybe we can stay with wood.",
+        "turn": 344,
+        "speaker": "A",
+        "supports": "initial natural material picked for the case",
+        "supported": true
+      },
+      {
+        "meeting_id": "IS1003d",
+        "quote": "I think you can transform the wood into plastic, maybe.",
+        "turn": 431,
+        "speaker": "B",
+        "supports": "who suggested the switch and the replacement material",
+        "supported": true
+      }
+    ],
+    "seconds": 10.7
+  }
+]

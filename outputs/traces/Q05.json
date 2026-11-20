@@ -1,0 +1,232 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116240.36,
+    "team_id": "TS3007",
+    "meetings": [
+      "TS3007a",
+      "TS3007b",
+      "TS3007c",
+      "TS3007d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116240.36,
+    "answer_parts": [
+      "Identify the initial energy source decision for team TS3007.",
+      "Identify the final energy source decision for team TS3007.",
+      "Identify the speaker who proposed the change from the initial to the final energy source."
+    ],
+    "queries": [
+      "Team TS3007's energy source changed between meetings. What did they first settle on, what did they end with, and who proposed the change?",
+      "TS3007 energy source",
+      "TS3007 battery solar kinetic",
+      "TS3007 power source change",
+      "TS3007 solar power proposal",
+      "TS3007 kinetic energy decision"
+    ],
+    "temporal": true,
+    "topics": [
+      "energy source"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116241.07,
+    "round": 1,
+    "queries": [
+      "Team TS3007's energy source changed between meetings. What did they first settle on, what did they end with, and who proposed the change?",
+      "TS3007 energy source",
+      "TS3007 battery solar kinetic",
+      "TS3007 power source change",
+      "TS3007 solar power proposal",
+      "TS3007 kinetic energy decision"
+    ],
+    "new_chunks": 19,
+    "total_chunks": 19,
+    "meetings": [
+      "TS3007a",
+      "TS3007b",
+      "TS3007c",
+      "TS3007d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 288,
+    "top_chunks": [
+      [
+        "TS3007c-c004",
+        0.2743,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3007b-c016",
+        0.2256,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3007b-c015",
+        0.0955,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3007b-c018",
+        0.0898,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3007c-c005",
+        0.0817,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3007c-c006",
+        0.0635,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3007c-c012",
+        0.0622,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3007d-c019",
+        0.0617,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116244.44,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team TS3007 initially settled on a standard replaceable battery in meeting b, which was changed in meeting c to a combination of battery and kinetic energy proposed by the Industrial Designer (Speaker C), and finally reverted back to just batteries in meeting d due to cost considerations proposed by the User Interface Designer (Speaker B).",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116244.75,
+    "proposed": 3,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "TS3007b",
+        "valid": true,
+        "error": "",
+        "snapped": true,
+        "similarity": 0.977
+      },
+      {
+        "meeting_id": "TS3007c",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "TS3007d",
+        "valid": false,
+        "error": "quote not found verbatim in transcript",
+        "snapped": false,
+        "similarity": 0.308
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116252.72,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "Team TS3007 finally reverted back to just batteries in meeting d due to cost considerations proposed by the User Interface Designer (Speaker B)."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116260.93,
+    "proposed": 1,
+    "added": 1,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116264.23,
+    "verdicts": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "unsupported_claims": [
+      "reverted back to just batteries in meeting d due to cost considerations proposed by the User Interface Designer (Speaker B)"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116266.94,
+    "before": "Team TS3007 initially settled on a standard replaceable battery in meeting b, which was changed in meeting c to a combination of battery and kinetic energy proposed by the Industrial Designer (Speaker C), and finally reverted back to just batteries in meeting d due to cost considerations proposed by the User Interface Designer (Speaker B).",
+    "after": "Team TS3007 initially settled on a standard replaceable battery in meeting b, which was changed in meeting c to a combination of battery and kinetic energy proposed by the Industrial Designer, and they apparently ended with just batteries in meeting d.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116266.94,
+    "answer": "Team TS3007 initially settled on a standard replaceable battery in meeting b, which was changed in meeting c to a combination of battery and kinetic energy proposed by the Industrial Designer, and they apparently ended with just batteries in meeting d.",
+    "citations": [
+      {
+        "meeting_id": "TS3007b",
+        "quote": "first you have the energy source. The energy source would be a battery, simple uh battery uh that you can find anywhere.",
+        "turn": 45,
+        "speaker": "C",
+        "supports": "initial energy source decision",
+        "supported": true
+      },
+      {
+        "meeting_id": "TS3007c",
+        "quote": "Yeah, you you you should we should A combination. Uh, you use the battery and w charge it up with kinetic.",
+        "turn": 90,
+        "speaker": "C",
+        "supports": "change to battery and kinetic energy",
+        "supported": true
+      },
+      {
+        "meeting_id": "TS3007d",
+        "quote": "the energy, which uh turn out to be uh batteries, so that's",
+        "turn": 711,
+        "speaker": "A",
+        "supports": "Team TS3007 finally reverted back to just batteries in meeting d due to cost considerations proposed by the User Interface Designer (Speaker B).",
+        "supported": true
+      }
+    ],
+    "seconds": 26.6
+  }
+]

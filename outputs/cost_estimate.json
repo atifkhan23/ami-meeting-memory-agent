@@ -1,0 +1,47 @@
+[
+  {
+    "meetings": 138,
+    "words": 676745,
+    "tokens": 900071,
+    "chunks": 4334,
+    "embedding_calls_local": 4334,
+    "extraction_llm_calls": 377,
+    "reconcile_llm_calls": 34,
+    "llm_cost_usd": 2.2,
+    "llm_cost_usd_2027_prices": 2.92,
+    "storage_mb": 38.9,
+    "embed_hours_laptop_cpu": 0.17,
+    "llm_hours_serial": 1.73,
+    "llm_hours_8_parallel": 0.22
+  },
+  {
+    "meetings": 1000,
+    "words": 4903949,
+    "tokens": 6522253,
+    "chunks": 31406,
+    "embedding_calls_local": 31406,
+    "extraction_llm_calls": 2732,
+    "reconcile_llm_calls": 250,
+    "llm_cost_usd": 15.97,
+    "llm_cost_usd_2027_prices": 21.16,
+    "storage_mb": 282.1,
+    "embed_hours_laptop_cpu": 1.24,
+    "llm_hours_serial": 12.57,
+    "llm_hours_8_parallel": 1.57
+  },
+  {
+    "meetings": 10000,
+    "words": 49039493,
+    "tokens": 65222525,
+    "chunks": 314058,
+    "embedding_calls_local": 314058,
+    "extraction_llm_calls": 27319,
+    "reconcile_llm_calls": 2500,
+    "llm_cost_usd": 159.67,
+    "llm_cost_usd_2027_prices": 211.58,
+    "storage_mb": 2821.5,
+    "embed_hours_laptop_cpu": 12.45,
+    "llm_hours_serial": 125.68,
+    "llm_hours_8_parallel": 15.71
+  }
+]

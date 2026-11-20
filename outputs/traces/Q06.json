@@ -1,0 +1,215 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116266.94,
+    "team_id": "ES2008",
+    "meetings": [
+      "ES2008a",
+      "ES2008b",
+      "ES2008c",
+      "ES2008d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116266.95,
+    "answer_parts": [
+      "Identify the feature proposed to prevent the remote from getting lost.",
+      "Determine the final status of this feature across the meetings.",
+      "Identify the speaker who raised the main objection.",
+      "State the specific reason given for the objection."
+    ],
+    "queries": [
+      "Team ES2008 wanted a feature to stop the remote getting lost. What happened to that feature, who raised the main objection to it, and what was the objection?",
+      "remote getting lost",
+      "lost remote feature",
+      "beeper remote lost",
+      "alarm remote lost",
+      "remote finder feature"
+    ],
+    "temporal": true,
+    "topics": [
+      "remote features",
+      "lost remote prevention"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116267.65,
+    "round": 1,
+    "queries": [
+      "Team ES2008 wanted a feature to stop the remote getting lost. What happened to that feature, who raised the main objection to it, and what was the objection?",
+      "remote getting lost",
+      "lost remote feature",
+      "beeper remote lost",
+      "alarm remote lost",
+      "remote finder feature"
+    ],
+    "new_chunks": 14,
+    "total_chunks": 14,
+    "meetings": [
+      "ES2008a",
+      "ES2008b",
+      "ES2008c",
+      "ES2008d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 163,
+    "top_chunks": [
+      [
+        "ES2008d-c008",
+        0.1757,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008b-c039",
+        0.1626,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2008a-c009",
+        0.157,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2008c-c000",
+        0.1281,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2008d-c039",
+        0.0896,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008b-c017",
+        0.0782,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008b-c016",
+        0.0772,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008c-c019",
+        0.0643,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116271.23,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team ES2008 initially proposed adding a feature that rings or beeps to prevent the remote from getting lost. However, this feature was ultimately rejected in meeting d because Speaker C (the User Interface Designer) argued that an external beeper is technologically difficult if the remote is under a couch and just a gimmick.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116271.26,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "ES2008b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2008d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116273.53,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "rejected in meeting d because Speaker C (the User Interface Designer) argued that an external beeper is [...] just a gimmick"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116276.56,
+    "proposed": 1,
+    "added": 1,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116294.65,
+    "verdicts": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "unsupported_claims": [],
+    "judge": "openai/gpt-oss-20b"
+  },
+  {
+    "stage": "final",
+    "t": 1795116294.65,
+    "answer": "Team ES2008 initially proposed adding a feature that rings or beeps to prevent the remote from getting lost. However, this feature was ultimately rejected in meeting d because Speaker C (the User Interface Designer) argued that an external beeper is technologically difficult if the remote is under a couch and just a gimmick.",
+    "citations": [
+      {
+        "meeting_id": "ES2008b",
+        "quote": "Like a button on a T_V_ you can press and it'll ring or something, I don't know like or beep?",
+        "turn": 258,
+        "speaker": "A",
+        "supports": "Identify the feature proposed to prevent the remote from getting lost.",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2008d",
+        "quote": "I think it would be difficult technologically, because if your if your remote's lost it's probably under the settee and in that case you can't you can't send an infrared sing signal to it to find it, s so it's",
+        "turn": 40,
+        "speaker": "C",
+        "supports": "State the specific reason given for the objection.",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2008d",
+        "quote": "I'm not quite sure how it would work and then I wonder if it's if it's more just a gimmick then anything else.",
+        "turn": 43,
+        "speaker": "C",
+        "supports": "rejected in meeting d because Speaker C (the User Interface Designer) argued that an external beeper is [...] just a gimmick",
+        "supported": true
+      }
+    ],
+    "seconds": 27.7
+  }
+]

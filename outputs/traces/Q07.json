@@ -1,0 +1,195 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116368.53,
+    "team_id": "IS1008",
+    "meetings": [
+      "IS1008a",
+      "IS1008b",
+      "IS1008c",
+      "IS1008d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116368.53,
+    "answer_parts": [
+      "In meeting IS1008b, the project manager (PM) asked the user interface designer (UI) to investigate the cost of adding a display.",
+      "In meeting IS1008c, the UI designer reported back that the cost would be 'twelve fifty' (12.50) per unit."
+    ],
+    "queries": [
+      "In Team IS1008, a team member was asked to find out what adding a display would cost. Who was it, and what figure did they come back with?",
+      "cost of adding a display",
+      "how much for a display",
+      "twelve fifty per unit",
+      "investigate display cost",
+      "price of the screen"
+    ],
+    "temporal": true,
+    "topics": [
+      "display",
+      "cost analysis"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116403.99,
+    "round": 1,
+    "queries": [
+      "In Team IS1008, a team member was asked to find out what adding a display would cost. Who was it, and what figure did they come back with?",
+      "cost of adding a display",
+      "how much for a display",
+      "twelve fifty per unit",
+      "investigate display cost",
+      "price of the screen"
+    ],
+    "new_chunks": 23,
+    "total_chunks": 23,
+    "meetings": [
+      "IS1008a",
+      "IS1008b",
+      "IS1008c",
+      "IS1008d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 208,
+    "top_chunks": [
+      [
+        "IS1008c-c027",
+        0.1796,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1008d-c010",
+        0.1273,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1008d-c011",
+        0.0946,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1008d-c014",
+        0.0797,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1008d-c013",
+        0.0783,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1008b-c015",
+        0.0771,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1008b-c013",
+        0.0633,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1008d-c012",
+        0.0616,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116407.27,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "In meeting IS1008c, the industrial designer asked the marketing expert to find out the cost of adding a display to the remote control. Later in the meeting, the marketing expert reported back that the cost would be twelve fifty per unit.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116407.34,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "IS1008c",
+        "valid": true,
+        "error": "",
+        "snapped": true,
+        "similarity": 0.986
+      },
+      {
+        "meeting_id": "IS1008b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116409.27,
+    "verdicts": {
+      "1": true,
+      "2": false
+    },
+    "unsupported_claims": [
+      "Later in the meeting, the marketing expert reported back that the cost would be twelve fifty per unit."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116411.51,
+    "proposed": 0,
+    "added": 0,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116413.5,
+    "before": "In meeting IS1008c, the industrial designer asked the marketing expert to find out the cost of adding a display to the remote control. Later in the meeting, the marketing expert reported back that the cost would be twelve fifty per unit.",
+    "after": "In meeting IS1008c, the industrial designer asked the marketing expert about the cost of adding a display, but the reported figure was apparently not provided with a supporting quote.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116413.5,
+    "answer": "In meeting IS1008c, the industrial designer asked the marketing expert about the cost of adding a display, but the reported figure was apparently not provided with a supporting quote.",
+    "citations": [
+      {
+        "meeting_id": "IS1008c",
+        "quote": "What do you think Ed? Do you he liked the display in one of the concepts that you showed, um, do you know how much it costs, um, to to add a little display like this uh?",
+        "turn": 143,
+        "speaker": "C",
+        "supports": "In meeting IS1008b, the project manager (PM) asked the user interface designer (UI) to investigate the cost of adding a display.",
+        "supported": true
+      }
+    ],
+    "seconds": 45.0
+  }
+]

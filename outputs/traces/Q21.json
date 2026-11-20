@@ -1,0 +1,215 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116855.13,
+    "team_id": "IS1007",
+    "meetings": [
+      "IS1007a",
+      "IS1007b",
+      "IS1007c",
+      "IS1007d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116855.14,
+    "answer_parts": [
+      "Identify the team member who checked component prices",
+      "State the total they reported for a version with all functions",
+      "State what the team then decided about the LCD"
+    ],
+    "queries": [
+      "In Team IS1007, one member said they would check the prices of components. Who was it, what total did they report for a version with all the functions, and what did the team then decide about the LCD?",
+      "check the prices of components",
+      "total for all the functions",
+      "decide about the LCD screen",
+      "how much does it cost"
+    ],
+    "temporal": true,
+    "topics": [
+      "component pricing",
+      "LCD screen"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116855.91,
+    "round": 1,
+    "queries": [
+      "In Team IS1007, one member said they would check the prices of components. Who was it, what total did they report for a version with all the functions, and what did the team then decide about the LCD?",
+      "check the prices of components",
+      "total for all the functions",
+      "decide about the LCD screen",
+      "how much does it cost"
+    ],
+    "new_chunks": 20,
+    "total_chunks": 20,
+    "meetings": [
+      "IS1007a",
+      "IS1007b",
+      "IS1007c",
+      "IS1007d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 349,
+    "top_chunks": [
+      [
+        "IS1007c-c021",
+        0.0963,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1007a-c008",
+        0.0933,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1007c-c029",
+        0.0807,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1007d-c012",
+        0.0807,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1007d-c006",
+        0.0768,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1007d-c007",
+        0.0764,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1007d-c001",
+        0.0492,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1007c-c020",
+        0.0492,
+        [
+          "bm25",
+          "vector"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116872.22,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Speaker C, who was the Industrial Designer in meeting IS1007d, reported a total cost of fifteen dollars for a version with all the functions. The team ultimately decided to remove the LCD screen from the remote control design to reduce costs and simplify usage.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116872.3,
+    "proposed": 2,
+    "valid": 1,
+    "checks": [
+      {
+        "meeting_id": "IS1007d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "IS1007d",
+        "valid": false,
+        "error": "quote not found verbatim in transcript",
+        "snapped": false,
+        "similarity": 0.279
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116874.5,
+    "verdicts": {
+      "1": true
+    },
+    "unsupported_claims": [
+      "Speaker C was the Industrial Designer in meeting IS1007d",
+      "The team ultimately decided to remove the LCD screen from the remote control design to reduce costs and simplify usage"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116877.16,
+    "proposed": 2,
+    "added": 2,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116879.57,
+    "verdicts": {
+      "1": true,
+      "2": false,
+      "3": true
+    },
+    "unsupported_claims": [
+      "Speaker C, who was the Industrial Designer in meeting IS1007d",
+      "The team ultimately decided to remove the LCD screen from the remote control design to reduce costs and simplify usage"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116881.32,
+    "before": "Speaker C, who was the Industrial Designer in meeting IS1007d, reported a total cost of fifteen dollars for a version with all the functions. The team ultimately decided to remove the LCD screen from the remote control design to reduce costs and simplify usage.",
+    "after": "Speaker C reported a total cost of about fifteen dollars for a version with all the functions, and the team apparently decided to eliminate the LCD.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116881.32,
+    "answer": "Speaker C reported a total cost of about fifteen dollars for a version with all the functions, and the team apparently decided to eliminate the LCD.",
+    "citations": [
+      {
+        "meeting_id": "IS1007d",
+        "quote": "It's about so the total cost if you if you want all the fuct functionalities will be about uh fifteen dollars.",
+        "turn": 149,
+        "speaker": "C",
+        "supports": "Speaker C reported a total of fifteen dollars for the version with all functions",
+        "supported": true
+      },
+      {
+        "meeting_id": "IS1007c",
+        "quote": "If you re-use the existing screen, we element eliminate the L_C_D_, after all the L_C_D_ just to display and if you have the colourful screen you can make the display colourful, fancy, as fancy as the one on the L_C_D_, maybe even better. So",
+        "turn": 121,
+        "speaker": "B",
+        "supports": "The team ultimately decided to remove the LCD screen from the remote control design to reduce costs and simplify usage",
+        "supported": true
+      }
+    ],
+    "seconds": 26.2
+  }
+]

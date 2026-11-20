@@ -1,0 +1,197 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116217.35,
+    "team_id": "TS3009",
+    "meetings": [
+      "TS3009a",
+      "TS3009b",
+      "TS3009c",
+      "TS3009d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116217.35,
+    "answer_parts": [
+      "Identify the speaker who first proposed replacing the titanium back material.",
+      "Identify the alternative material proposed as a replacement.",
+      "Determine the final decision regarding the use of titanium for the remote back."
+    ],
+    "queries": [
+      "Team TS3009 planned a titanium back for their remote. Who first proposed replacing the titanium, what did they propose instead, and was the titanium kept in the end?",
+      "titanium back material",
+      "replace titanium back",
+      "what material for the back",
+      "titanium too expensive",
+      "plastic back remote"
+    ],
+    "temporal": true,
+    "topics": [
+      "remote design",
+      "materials",
+      "cost"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116218.19,
+    "round": 1,
+    "queries": [
+      "Team TS3009 planned a titanium back for their remote. Who first proposed replacing the titanium, what did they propose instead, and was the titanium kept in the end?",
+      "titanium back material",
+      "replace titanium back",
+      "what material for the back",
+      "titanium too expensive",
+      "plastic back remote"
+    ],
+    "new_chunks": 19,
+    "total_chunks": 19,
+    "meetings": [
+      "TS3009a",
+      "TS3009b",
+      "TS3009c",
+      "TS3009d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 365,
+    "top_chunks": [
+      [
+        "TS3009c-c024",
+        0.2748,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3009d-c023",
+        0.1894,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3009c-c023",
+        0.1396,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3009d-c021",
+        0.1289,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3009d-c003",
+        0.1265,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3009d-c002",
+        0.1252,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3009b-c002",
+        0.0633,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "TS3009a-c019",
+        0.0487,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116221.46,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Speaker B (User Interface Designer) first proposed replacing the titanium back with titanium-coloured plastic, and the team ultimately decided to drop real titanium entirely and use plastic to reduce production costs.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116221.54,
+    "proposed": 2,
+    "valid": 1,
+    "checks": [
+      {
+        "meeting_id": "TS3009d",
+        "valid": true,
+        "error": "",
+        "snapped": true,
+        "similarity": 0.909
+      },
+      {
+        "meeting_id": "TS3009d",
+        "valid": false,
+        "error": "quote shorter than 6 words",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116223.82,
+    "verdicts": {
+      "1": true
+    },
+    "unsupported_claims": [
+      "Speaker B is the User Interface Designer in meeting d",
+      "the team ultimately decided to drop real titanium entirely and use plastic to reduce production costs"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116226.73,
+    "proposed": 2,
+    "added": 0,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116228.78,
+    "before": "Speaker B (User Interface Designer) first proposed replacing the titanium back with titanium-coloured plastic, and the team ultimately decided to drop real titanium entirely and use plastic to reduce production costs.",
+    "after": "Speaker B first proposed replacing the titanium with titanium-coloured plastic, and apparently the titanium was not kept in the end.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116228.78,
+    "answer": "Speaker B first proposed replacing the titanium with titanium-coloured plastic, and apparently the titanium was not kept in the end.",
+    "citations": [
+      {
+        "meeting_id": "TS3009d",
+        "quote": "plastic coloured titanium, uh titanium-coloured plastic?",
+        "turn": 366,
+        "speaker": "B",
+        "supports": "Speaker B first proposed replacing the titanium",
+        "supported": true
+      }
+    ],
+    "seconds": 11.4
+  }
+]

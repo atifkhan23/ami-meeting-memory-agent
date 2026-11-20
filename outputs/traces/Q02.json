@@ -1,0 +1,185 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116208.47,
+    "team_id": "ES2003",
+    "meetings": [
+      "ES2003a",
+      "ES2003b",
+      "ES2003c",
+      "ES2003d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116208.48,
+    "answer_parts": [
+      "Identify the initial material choice for the remote case.",
+      "Identify the final material choice for the remote case.",
+      "Identify the reason provided for the switch between materials."
+    ],
+    "queries": [
+      "Team ES2003 leaned towards one material for the case and then switched to another. What did they lean towards first, what did they end with, and why did they switch?",
+      "remote case material",
+      "plastic vs metal case",
+      "aluminum case remote",
+      "rubber case remote",
+      "why change case material"
+    ],
+    "temporal": true,
+    "topics": [
+      "case material"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116209.41,
+    "round": 1,
+    "queries": [
+      "Team ES2003 leaned towards one material for the case and then switched to another. What did they lean towards first, what did they end with, and why did they switch?",
+      "remote case material",
+      "plastic vs metal case",
+      "aluminum case remote",
+      "rubber case remote",
+      "why change case material"
+    ],
+    "new_chunks": 25,
+    "total_chunks": 25,
+    "meetings": [
+      "ES2003a",
+      "ES2003b",
+      "ES2003c",
+      "ES2003d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 199,
+    "top_chunks": [
+      [
+        "ES2003c-c030",
+        0.1135,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2003d-c021",
+        0.1125,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2003c-c025",
+        0.0956,
+        [
+          "vector"
+        ]
+      ],
+      [
+        "ES2003b-c017",
+        0.0953,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2003c-c002",
+        0.0782,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2003d-c004",
+        0.0645,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2003c-c021",
+        0.0624,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2003c-c029",
+        0.0623,
+        [
+          "bm25",
+          "vector"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116214.51,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team ES2003 initially leaned towards a spongy rubber material for the remote case, as expressed by Speaker A (Industrial Designer). Ultimately, they switched to a solid plastic case during meeting d. They made this switch to reduce costs and offset the expense of incorporating the LCD screen.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116214.52,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "ES2003c",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2003d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116217.34,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116217.34,
+    "answer": "Team ES2003 initially leaned towards a spongy rubber material for the remote case, as expressed by Speaker A (Industrial Designer). Ultimately, they switched to a solid plastic case during meeting d. They made this switch to reduce costs and offset the expense of incorporating the LCD screen.",
+    "citations": [
+      {
+        "meeting_id": "ES2003c",
+        "quote": "Mm-hmm. Mm. Um I'm actually gonna be bold and go oo go straight for rubber um for reasons I'll go into uh in more detail.",
+        "turn": 62,
+        "speaker": "A",
+        "supports": "Initial choice of rubber material for the case",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2003d",
+        "quote": "are people maybe not happy with, but are willing to go ahead with this in going for a plastic solid case, to keep the L_C_D_?",
+        "turn": 111,
+        "speaker": "B",
+        "supports": "Final choice of solid plastic case to keep the LCD",
+        "supported": true
+      }
+    ],
+    "seconds": 8.9
+  }
+]

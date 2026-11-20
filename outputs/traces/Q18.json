@@ -1,0 +1,229 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116746.39,
+    "team_id": "ES2014",
+    "meetings": [
+      "ES2014a",
+      "ES2014b",
+      "ES2014c",
+      "ES2014d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116746.39,
+    "answer_parts": [
+      "Team ES2014 first planned to include a beeping sound to let people find a lost remote.",
+      "That plan changed to using a flashing light instead of a beep.",
+      "Speaker C suggested how the new version should be presented to buyers."
+    ],
+    "queries": [
+      "How did Team ES2014 first plan to let people find a lost remote, what did that plan change to, and who suggested how the new version should be presented to buyers?",
+      "find a lost remote",
+      "beeping sound lost remote",
+      "flashing light instead",
+      "presentation to buyers"
+    ],
+    "temporal": true,
+    "topics": [
+      "lost remote feature",
+      "design changes"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116746.8,
+    "round": 1,
+    "queries": [
+      "How did Team ES2014 first plan to let people find a lost remote, what did that plan change to, and who suggested how the new version should be presented to buyers?",
+      "find a lost remote",
+      "beeping sound lost remote",
+      "flashing light instead",
+      "presentation to buyers"
+    ],
+    "new_chunks": 25,
+    "total_chunks": 25,
+    "meetings": [
+      "ES2014a",
+      "ES2014b",
+      "ES2014c",
+      "ES2014d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 283,
+    "top_chunks": [
+      [
+        "ES2014b-c022",
+        0.0809,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2014a-c003",
+        0.0627,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2014c-c016",
+        0.0625,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2014b-c024",
+        0.0492,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2014b-c005",
+        0.0489,
+        [
+          "vector"
+        ]
+      ],
+      [
+        "ES2014b-c000",
+        0.0477,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2014d-c013",
+        0.0473,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2014d-c010",
+        0.0328,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "answer_failed",
+    "t": 1795116746.8,
+    "error": "all providers failed: gemini-3.6-flash: circuit open; gemini-3-flash-preview: circuit open; gemini-3.5-flash-lite: circuit open; gemini-3.1-flash-lite: circuit open; groq/openai/gpt-oss-120b: HTTP 413: prompt ~16060 tokens too large for Groq free-tier TPM",
+    "wait_round": 0
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116810.07,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team ES2014 initially planned to use a buzzer system to help locate a lost remote. That plan was changed to using a clapping function instead, and User Interface Designer Speaker C suggested how the new feature should be presented to buyers.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116810.11,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "ES2014b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2014b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116817.22,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "Team ES2014 initially planned to use a buzzer system to help locate a lost remote.",
+      "That plan was changed to using a clapping function instead",
+      "User Interface Designer Speaker C suggested how the new feature should be presented to buyers."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116819.91,
+    "proposed": 3,
+    "added": 1,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116822.76,
+    "verdicts": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "unsupported_claims": [
+      "User Interface Designer Speaker C"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116827.26,
+    "before": "Team ES2014 initially planned to use a buzzer system to help locate a lost remote. That plan was changed to using a clapping function instead, and User Interface Designer Speaker C suggested how the new feature should be presented to buyers.",
+    "after": "Team ES2014 initially planned to use a buzzer system to help locate a lost remote, which was changed to a clapping function instead. Speaker C suggested that clapping would appeal well to the older generation because everyone can do it without fearing new technology.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116827.26,
+    "answer": "Team ES2014 initially planned to use a buzzer system to help locate a lost remote, which was changed to a clapping function instead. Speaker C suggested that clapping would appeal well to the older generation because everyone can do it without fearing new technology.",
+    "citations": [
+      {
+        "meeting_id": "ES2014b",
+        "quote": "Maybe we can have some kind of sensor which is kept somewhere where you can some kind of buzzer system between the two.",
+        "turn": 103,
+        "speaker": "B",
+        "supports": "Team ES2014 first planned to include a beeping sound or buzzer system to let people find a lost remote.",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2014b",
+        "quote": "And that wouldn't put off the kind of older generation either, 'cause everyone can whistle or clap, and they wouldn't have to be kind of scared of this new technology.",
+        "turn": 174,
+        "speaker": "C",
+        "supports": "Speaker C suggested how the new version should be presented to buyers regarding the age range.",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2014b",
+        "quote": "Well, so maybe a clap rather than a whistle would be On the basis that if we've got if we're catering to the whole age range, you want something that's easy to do,",
+        "turn": 175,
+        "speaker": "A",
+        "supports": "That plan was changed to using a clapping function instead",
+        "supported": true
+      }
+    ],
+    "seconds": 80.9
+  }
+]

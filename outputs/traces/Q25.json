@@ -1,0 +1,185 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116908.03,
+    "team_id": "ES2011",
+    "meetings": [
+      "ES2011a",
+      "ES2011b",
+      "ES2011c",
+      "ES2011d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116908.03,
+    "answer_parts": [
+      "What the team decided about fruit and vegetable shapes for the remote in the end",
+      "The reason why they made this decision"
+    ],
+    "queries": [
+      "Team ES2011 played with fruit and vegetable ideas for the look of their remote. What did they decide about fruit and vegetable shapes in the end, and why?",
+      "fruit shape banana vegetable",
+      "banana shape vegetable ridiculous",
+      "look like a fruit",
+      "vegetable shape design"
+    ],
+    "temporal": true,
+    "topics": [
+      "remote shape",
+      "fruit and vegetable design"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116909.53,
+    "round": 1,
+    "queries": [
+      "Team ES2011 played with fruit and vegetable ideas for the look of their remote. What did they decide about fruit and vegetable shapes in the end, and why?",
+      "fruit shape banana vegetable",
+      "banana shape vegetable ridiculous",
+      "look like a fruit",
+      "vegetable shape design"
+    ],
+    "new_chunks": 16,
+    "total_chunks": 16,
+    "meetings": [
+      "ES2011a",
+      "ES2011b",
+      "ES2011c",
+      "ES2011d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 259,
+    "top_chunks": [
+      [
+        "ES2011c-c007",
+        0.177,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011c-c026",
+        0.1733,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011d-c001",
+        0.1526,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011c-c022",
+        0.1233,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011c-c006",
+        0.1097,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2011d-c013",
+        0.0919,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011d-c015",
+        0.0589,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011b-c010",
+        0.0492,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116921.15,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "In the end, Team ES2011 decided against shaping the remote like fruits or vegetables, opting instead for standard shapes with different colors representing different fruits. The team made this choice because irregular fruit and vegetable shapes would make the remote uncomfortable to hold.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116921.19,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "ES2011d",
+        "valid": true,
+        "error": "",
+        "snapped": true,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2011d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116923.52,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116923.52,
+    "answer": "In the end, Team ES2011 decided against shaping the remote like fruits or vegetables, opting instead for standard shapes with different colors representing different fruits. The team made this choice because irregular fruit and vegetable shapes would make the remote uncomfortable to hold.",
+    "citations": [
+      {
+        "meeting_id": "ES2011d",
+        "quote": "Yeah. 'Cause yeah no-one wants to hold a remote that's uncomfortable obviously.",
+        "turn": 216,
+        "speaker": "C",
+        "supports": "The reason why they decided against fruit and vegetable shapes due to comfort",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2011d",
+        "quote": "We could make it that shape but just have different colours, and call 'em the different fruits.",
+        "turn": 228,
+        "speaker": "B",
+        "supports": "What they decided instead of physical fruit shapes",
+        "supported": true
+      }
+    ],
+    "seconds": 15.5
+  }
+]

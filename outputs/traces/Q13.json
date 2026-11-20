@@ -1,0 +1,216 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116560.2,
+    "team_id": "TS3004",
+    "meetings": [
+      "TS3004a",
+      "TS3004b",
+      "TS3004c",
+      "TS3004d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116560.2,
+    "answer_parts": [
+      "Speech recognition was not included in the final design for team TS3004.",
+      "The team last reversed their position on speech recognition in meeting C, where they decided to remove it after previously considering it."
+    ],
+    "queries": [
+      "Team TS3004 changed its mind about speech recognition more than once. Was speech recognition in their final design, and in which of their four meetings did they last reverse their position on it?",
+      "speech recognition feature",
+      "voice control remote",
+      "remove speech recognition",
+      "do we want speech recognition",
+      "final design features"
+    ],
+    "temporal": true,
+    "topics": [
+      "speech recognition",
+      "design features"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116560.87,
+    "round": 1,
+    "queries": [
+      "Team TS3004 changed its mind about speech recognition more than once. Was speech recognition in their final design, and in which of their four meetings did they last reverse their position on it?",
+      "speech recognition feature",
+      "voice control remote",
+      "remove speech recognition",
+      "do we want speech recognition",
+      "final design features"
+    ],
+    "new_chunks": 24,
+    "total_chunks": 24,
+    "meetings": [
+      "TS3004a",
+      "TS3004b",
+      "TS3004c",
+      "TS3004d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 343,
+    "top_chunks": [
+      [
+        "TS3004c-c037",
+        0.1763,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3004c-c035",
+        0.1586,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3004b-c010",
+        0.1262,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3004d-c002",
+        0.0968,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "TS3004b-c037",
+        0.0656,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "TS3004b-c038",
+        0.0623,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3004b-c009",
+        0.0476,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3004d-c019",
+        0.0473,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116564.19,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Speech recognition was included in the final design for team TS3004. Although they previously rejected it in meeting B and reconsidered it multiple times, the team last reversed their position and decided to include speech recognition in meeting C, which was carried forward into their final design.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116564.23,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "TS3004b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "TS3004c",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116566.34,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "Speech recognition was included in the final design for team TS3004",
+      "reconsidered it multiple times",
+      "carried forward into their final design"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116569.66,
+    "proposed": 3,
+    "added": 1,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116571.32,
+    "verdicts": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "unsupported_claims": [],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116571.33,
+    "answer": "Speech recognition was included in the final design for team TS3004. Although they previously rejected it in meeting B and reconsidered it multiple times, the team last reversed their position and decided to include speech recognition in meeting C, which was carried forward into their final design.",
+    "citations": [
+      {
+        "meeting_id": "TS3004b",
+        "quote": "I d Yeah. I don't think it's uh useful enough to take the effort to design something with uh speech recognition.",
+        "turn": 406,
+        "speaker": "B",
+        "supports": "Rejection of speech recognition in meeting B",
+        "supported": true
+      },
+      {
+        "meeting_id": "TS3004c",
+        "quote": "Okay, we just put it in, because it's a good feature. We have to stop now. Okay, just We have to stop it now.",
+        "turn": 603,
+        "speaker": "A",
+        "supports": "Final decision in meeting C to include speech recognition",
+        "supported": true
+      },
+      {
+        "meeting_id": "TS3004c",
+        "quote": "Can we just put it speech recognition in it as well, okay?",
+        "turn": 567,
+        "speaker": "A",
+        "supports": "Speech recognition was included in the final design for team TS3004",
+        "supported": true
+      }
+    ],
+    "seconds": 11.1
+  }
+]

@@ -1,0 +1,139 @@
+{
+  "description": "Independent evaluation set. Ground truth was established by a human-in-the-loop reading of the original transcripts (grep + reading the surrounding turns), NOT by the agent's LLM. Teams were chosen to avoid overlap with the 25 graded questions. key_facts are regex alternatives used for deterministic scoring; gold_evidence quotes are verified verbatim by tests/scripts.",
+  "questions": [
+    {
+      "id": "E01", "team": "IS1004", "category": ["rejected proposals", "historical vs current", "decision changes"],
+      "question": "In Team IS1004's final costing, one member wanted a rubber case. Who was it, what happened to the rubber when the team went over budget, and what was the case made of in the end?",
+      "ground_truth": "Speaker B wanted rubber (so it survives being dropped); Speakers A and D said it was too expensive. When the costing went over budget B (echoed by C) said to make it plastic instead of rubber, which brought them roughly on budget; the final case is plastic (plastic had already been recommended by C in meeting c).",
+      "key_facts": [["\\bB\\b"], ["plastic"], ["budget|expensive|cost"]],
+      "gold_evidence": [
+        {"meeting_id": "IS1004d", "quote": "Well no didn't we say we wanted to do a rubber"},
+        {"meeting_id": "IS1004d", "quote": "Make it plastic instead of rubber. And then we're basically o on budget except for you know ten cents."},
+        {"meeting_id": "IS1004c", "quote": "plastic is I think is the most appropriate one, it'll bring the cost down"}
+      ],
+      "required_meetings": ["IS1004c", "IS1004d"], "answerable": true
+    },
+    {
+      "id": "E02", "team": "ES2013", "category": ["decision changes", "historical vs current"],
+      "question": "Which energy source did Team ES2013 converge on in their conceptual design meeting, was it kept in the final costing, and what total cost did they reach against what budget?",
+      "ground_truth": "Kinetic energy: the consensus in ES2013c was to use kinetic if at all possible; it was kept in ES2013d's costing (one kinetic unit), and the total came to 9.20 (pounds) against the 12.50 allowed.",
+      "key_facts": [["kinetic"], ["kept|retain|still|final|yes|remained"], ["9\\.20|nine (pounds )?twenty|9,20"], ["12\\.5|twelve (and a half|point five|fifty)|12,5"]],
+      "gold_evidence": [
+        {"meeting_id": "ES2013c", "quote": "So the consensus seems to be use the kinetic if it's at all possible."},
+        {"meeting_id": "ES2013d", "quote": "Kinetic is um and how many of those will we need per we only need one."},
+        {"meeting_id": "ES2013d", "quote": "the total cost has been calculated as nine Pounds twenty out of the twelve and a half we were allowed."}
+      ],
+      "required_meetings": ["ES2013c", "ES2013d"], "answerable": true
+    },
+    {
+      "id": "E03", "team": "IS1000", "category": ["team member preferences", "unresolved disagreements", "decision changes"],
+      "question": "In Team IS1000, which speaker championed keeping an LCD screen and on what grounds, and what happened to the LCD and to speech recognition in the final costing?",
+      "ground_truth": "Speaker C argued for the LCD (proposed it in IS1000c; in IS1000d said they really want an LCD or they would not get the market). In the final costing the LCD was cut (B: we should cut the LCD screen; replaced by extra buttons) and speech recognition was also taken out because of the budget, returning to the original, on-budget version.",
+      "key_facts": [["\\bC\\b"], ["market|sell|appeal|attract"], ["(LCD|L_C_D_|screen).{0,80}(cut|drop|remov|out|scrap)|(cut|drop|remov|scrap).{0,80}(LCD|L_C_D_|screen)"], ["speech"]],
+      "gold_evidence": [
+        {"meeting_id": "IS1000d", "quote": "We we really want a L_C_D_ other otherwise we w wouldn not get the market."},
+        {"meeting_id": "IS1000d", "quote": "So um I I think we should we should cut the L_C_D_ screen."},
+        {"meeting_id": "IS1000d", "quote": "Okay. So L_C_D_'s out, is speech rec out now?"}
+      ],
+      "required_meetings": ["IS1000c", "IS1000d"], "answerable": true
+    },
+    {
+      "id": "E04", "team": "TS3005", "category": ["decision changes", "historical vs current"],
+      "question": "Team TS3005 designed an interface built around an LCD touch screen. To get within budget in their final meeting, what did they drop, and did the touch screen survive?",
+      "ground_truth": "They dropped speech recognition together with the speaker/microphone and dropped the scroll wheel; the LCD touch screen stayed (the interface had been planned in TS3005c as only an LCD screen, no buttons).",
+      "key_facts": [["speech|microphone|mic"], ["scroll"], ["(screen|LCD|L_C_D_).{0,80}(kept|stay|surviv|remain|retain|still)|(kept|keep|surviv|remain|retain).{0,80}(screen|LCD|L_C_D_)"]],
+      "gold_evidence": [
+        {"meeting_id": "TS3005c", "quote": "we uh determined that will not be no buttons, but only an L_C_D_ screen"},
+        {"meeting_id": "TS3005d", "quote": "So it's curved, it's still that so we we dropped the speech recognition together with the speaker."},
+        {"meeting_id": "TS3005d", "quote": "We dropped the scroll wheel. And the rest is the same, huh?"}
+      ],
+      "required_meetings": ["TS3005c", "TS3005d"], "answerable": true
+    },
+    {
+      "id": "E05", "team": "IS1006", "category": ["who made a commitment", "action ownership", "commitment follow-up"],
+      "question": "In Team IS1006's second meeting, Speaker B asked for research into whether people really need to jump to high channel numbers. Who said they would look into it, and was an answer reported back in a later meeting?",
+      "ground_truth": "Speaker D said they would have a look / check in their department for a specialist. No report-back of that research appears in IS1006c or IS1006d (not followed up in the transcripts).",
+      "key_facts": [["\\bD\\b"], ["no (record|evidence|report|indication|sign)|not (reported|followed|mentioned|found)|never|does not appear|no later|without"]],
+      "gold_evidence": [
+        {"meeting_id": "IS1006b", "quote": "Could we carry out some research if we w really need this, like how many people really need to go to channel number twenty five"},
+        {"meeting_id": "IS1006b", "quote": "Well I could could uh have a look at that maybe. I'll check in my department if there's someone specialist in that."}
+      ],
+      "required_meetings": ["IS1006b"], "answerable": true
+    },
+    {
+      "id": "E06", "team": "ES2015", "category": ["team member preferences", "unresolved disagreements", "decision changes"],
+      "question": "In Team ES2015, which speaker found the fruit-and-vegetable trend a strange idea for a remote, how did another member propose adapting it, and how did the fruit theme show up in the final design?",
+      "ground_truth": "Speaker A found fruit and vegetables a strange idea for a remote (ES2015c); Speaker B proposed a more abstract design stripped down to the basic shapes of fruits and vegetables; A then agreed to stick with the fruit and veggie theme. In ES2015d the design was mango-shaped and the colour combinations were named after fruits (e.g. banana black and yellow).",
+      "key_facts": [["\\bA\\b"], ["abstract|basic shape"], ["mango|colour.{0,40}(named|fruit)|named after"]],
+      "gold_evidence": [
+        {"meeting_id": "ES2015c", "quote": "But fruits and vegetables seems a very strange idea for a remote control."},
+        {"meeting_id": "ES2015c", "quote": "I think we possibly could take a more abstract design. Like look at the basic shapes of different fruits and vegetables."},
+        {"meeting_id": "ES2015d", "quote": "the colour um combination just could just be named after different fruit, like banana could be black and yellow"}
+      ],
+      "required_meetings": ["ES2015c", "ES2015d"], "answerable": true
+    },
+    {
+      "id": "E07", "team": "ES2005", "category": ["rejected proposals", "cross-meeting references"],
+      "question": "Team ES2005 discussed an 'easy finder' gimmick. What form was first suggested and by whom, what concern did the project manager raise, what alternative did another member suggest, and did speech technology end up in the final design?",
+      "ground_truth": "Speaker D suggested an easy finder with a whistle function (ES2005b); Speaker A asked whether anyone had researched how many people can whistle; Speaker C suggested voice recognition instead, e.g. saying 'where are you?'. In the final evaluation (ES2005d) A said the remote has the latest trends in speech technology but no screen.",
+      "key_facts": [["whistl"], ["\\bD\\b"], ["voice|speech"], ["final|ES2005d|evaluation|has|includ|yes|kept"]],
+      "gold_evidence": [
+        {"meeting_id": "ES2005b", "quote": "Easy finder with the a whistle function or something,"},
+        {"meeting_id": "ES2005b", "quote": "have we done any research into how many people can whistle?"},
+        {"meeting_id": "ES2005b", "quote": "instead of a whistle if it's got the voice recognition you could have it just, you know, where are you?."},
+        {"meeting_id": "ES2005d", "quote": "it its' got the latest trends in speech technology, but it's missing the screen"}
+      ],
+      "required_meetings": ["ES2005b", "ES2005d"], "answerable": true
+    },
+    {
+      "id": "E08", "team": "ES2005", "category": ["unresolved disagreements", "team member preferences"],
+      "question": "Who in Team ES2005 proposed a banana-shaped remote, who was sceptical of the fruit idea, and was that scepticism still present at the final evaluation?",
+      "ground_truth": "Speaker A proposed the banana-shaped remote (ES2005c); Speaker D said they were not sure about the banana idea and C was sarcastic about fruit; at the final evaluation (ES2005d) Speaker C was still not 'swallowing the fruit' and would have liked an LCD screen, so the disagreement remained.",
+      "key_facts": [["\\bA\\b"], ["\\bC\\b|\\bD\\b"], ["still|remain|final|unresolved|persist"]],
+      "gold_evidence": [
+        {"meeting_id": "ES2005c", "quote": "Okay, like we could have a big banana shaped remote control, 'cause it's yellow fruit, right?"},
+        {"meeting_id": "ES2005c", "quote": "Yeah. y I'm I'm not sure about the banana idea."},
+        {"meeting_id": "ES2005d", "quote": "Just the fruit does me in, I mean uh it might it might be trendy to some, but I'm just not swallowing the fruit"}
+      ],
+      "required_meetings": ["ES2005c", "ES2005d"], "answerable": true
+    },
+    {
+      "id": "E09", "team": "ES2012", "category": ["three or more meetings", "decision changes"],
+      "question": "Trace Team ES2012's voice-recognition idea: who first floated a remote with no buttons using voice recognition, what risk did the designer raise in the next meeting, and was voice control in the final design?",
+      "ground_truth": "Speaker A floated a remote with no buttons at all via voice recognition (ES2012b). In ES2012c Speaker B warned the voice technology was not highly developed / still experimental; A nonetheless confirmed it will have voice recognition. In ES2012d the final remote has a microphone for voice commands (and a speech 'where are you' function), alongside a few buttons.",
+      "key_facts": [["\\bA\\b"], ["experimental|not (really )?(highly )?developed|immature|risk"], ["microphone|voice command|yes|included|final design (has|had|includ)|built"]],
+      "gold_evidence": [
+        {"meeting_id": "ES2012b", "quote": "I wonder whether we could get the remote control with no buttons at all if we went for voice recognition"},
+        {"meeting_id": "ES2012c", "quote": "the problem is the the the voice technology is not really highly developed, it's sort of still still in an ex experimental form"},
+        {"meeting_id": "ES2012d", "quote": "Uh we got a microphone there which for all the voice commands so you can you know talk to it like that and it'll still understand."}
+      ],
+      "required_meetings": ["ES2012b", "ES2012c", "ES2012d"], "answerable": true
+    },
+    {
+      "id": "E10", "team": "IS1001", "category": ["indirect references", "cross-meeting references"],
+      "question": "At the start of Team IS1001's final meeting, the project manager costed 'the aspect discussed last time'. What design did that refer to, and what did it cost against the limit?",
+      "ground_truth": "It referred to the concept agreed in IS1001c: a standard battery, a yellow banana-shaped case with a spongy rubber cover, and a wheel; the cost came to 10.7 Euros against the 12.5 Euro limit.",
+      "key_facts": [["battery"], ["banana"], ["rubber|spongy"], ["10\\.7|ten point seven"]],
+      "gold_evidence": [
+        {"meeting_id": "IS1001d", "quote": "I look at the aspect discussed last time, that is to say uh to have a standard battery, to have a yellow banana shaped uh case with uh a rubber material around it"},
+        {"meeting_id": "IS1001d", "quote": "And the cost ended to be ten point seven Euros."},
+        {"meeting_id": "IS1001c", "quote": "Okay odd shape with spongy cover. And standard battery okay, a chip imprint, there's no specific problem."}
+      ],
+      "required_meetings": ["IS1001c", "IS1001d"], "answerable": true
+    },
+    {
+      "id": "E11", "team": "IS1005", "category": ["abstention"],
+      "question": "What final production cost did Team IS1005 report in their meeting d?",
+      "ground_truth": "Cannot be answered: IS1005 has no meeting d in the corpus (only IS1005a-c). The agent should say the evidence is unavailable rather than invent a figure.",
+      "key_facts": [["no (meeting d|evidence|record|data|information)|not (available|in the|present|included|found)|insufficient|cannot|does not (exist|appear)|unavailable|only (three|3)|missing"]],
+      "gold_evidence": [], "required_meetings": [], "answerable": false
+    },
+    {
+      "id": "E12", "team": "IS1006", "category": ["abstention", "false premise"],
+      "question": "Why did Team IS1006 choose a wooden case for their remote control?",
+      "ground_truth": "False premise: wood is never mentioned in any IS1006 transcript. The agent should say there is no evidence of a wooden case.",
+      "key_facts": [["no (evidence|record|mention|indication)|not (mention|support|chose|choose|find|found|discuss)|never|insufficient|cannot|did not|false premise|does not"]],
+      "gold_evidence": [], "required_meetings": [], "answerable": false
+    }
+  ]
+}

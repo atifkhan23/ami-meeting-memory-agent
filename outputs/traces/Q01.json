@@ -1,0 +1,205 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116161.69,
+    "team_id": "TS3006",
+    "meetings": [
+      "TS3006a",
+      "TS3006b",
+      "TS3006c",
+      "TS3006d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116161.69,
+    "answer_parts": [
+      "Identify which feature (LCD screen or speech recognition) was dropped due to cost constraints.",
+      "Identify which feature was retained.",
+      "State the specific reason provided for keeping the retained feature."
+    ],
+    "queries": [
+      "Team TS3006 planned both an LCD screen and speech recognition. When the costs forced a cut, which of the two did they drop, which did they keep, and what reason was given for keeping it?",
+      "LCD screen speech recognition cost",
+      "drop LCD screen speech recognition",
+      "too expensive LCD screen",
+      "keep speech recognition reason",
+      "budget constraints remote features"
+    ],
+    "temporal": true,
+    "topics": [
+      "feature selection",
+      "budget constraints"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116190.03,
+    "round": 1,
+    "queries": [
+      "Team TS3006 planned both an LCD screen and speech recognition. When the costs forced a cut, which of the two did they drop, which did they keep, and what reason was given for keeping it?",
+      "LCD screen speech recognition cost",
+      "drop LCD screen speech recognition",
+      "too expensive LCD screen",
+      "keep speech recognition reason",
+      "budget constraints remote features"
+    ],
+    "new_chunks": 24,
+    "total_chunks": 24,
+    "meetings": [
+      "TS3006a",
+      "TS3006b",
+      "TS3006c",
+      "TS3006d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 501,
+    "top_chunks": [
+      [
+        "TS3006d-c005",
+        0.1798,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3006b-c006",
+        0.1717,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3006d-c004",
+        0.111,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3006c-c004",
+        0.1108,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "TS3006a-c000",
+        0.0799,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "TS3006c-c023",
+        0.0484,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3006a-c008",
+        0.0464,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "TS3006b-c011",
+        0.0458,
+        [
+          "bm25",
+          "vector"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116194.94,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "When facing cost constraints, Team TS3006 dropped speech recognition and retained the LCD screen. Project Manager A noted that keeping the LCD screen was necessary because losing it would require adding numerous extra buttons.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116194.96,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "TS3006d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "TS3006d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116197.14,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "Team TS3006 dropped speech recognition and retained the LCD screen specifically when facing cost constraints.",
+      "Project Manager A noted..."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116206.31,
+    "proposed": 2,
+    "added": 0,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116208.47,
+    "before": "When facing cost constraints, Team TS3006 dropped speech recognition and retained the LCD screen. Project Manager A noted that keeping the LCD screen was necessary because losing it would require adding numerous extra buttons.",
+    "after": "Team TS3006 apparently dropped speech recognition and retained the LCD screen because losing the LCD screen would require a lot of extra buttons.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116208.47,
+    "answer": "Team TS3006 apparently dropped speech recognition and retained the LCD screen because losing the LCD screen would require a lot of extra buttons.",
+    "citations": [
+      {
+        "meeting_id": "TS3006d",
+        "quote": "Yep. Okay. Because if you d lose the L_C_D_ screen, we need a lot of Yeah. We need a lot of extra buttons.",
+        "turn": 101,
+        "speaker": "A",
+        "supports": "Reason for keeping the LCD screen",
+        "supported": true
+      },
+      {
+        "meeting_id": "TS3006d",
+        "quote": "Okay so we drop the speech. And drop it yeah? Okay. S Fo Four less Euros. So we still have three and a half Euro to lose.",
+        "turn": 106,
+        "speaker": "A",
+        "supports": "Dropping speech recognition",
+        "supported": true
+      }
+    ],
+    "seconds": 46.8
+  }
+]

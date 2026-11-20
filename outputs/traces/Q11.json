@@ -1,0 +1,193 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116535.36,
+    "team_id": "ES2011",
+    "meetings": [
+      "ES2011a",
+      "ES2011b",
+      "ES2011c",
+      "ES2011d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116535.36,
+    "answer_parts": [
+      "Identify the specific requirement the Project Manager (PM) committed to investigating.",
+      "Locate the meeting where the PM promised to check the meaning of this requirement.",
+      "Locate the subsequent meeting where the PM provided the clarification or answer regarding that requirement."
+    ],
+    "queries": [
+      "Team ES2011's project manager said they would check what one of the new project requirements meant. What was the question, and what was the answer when it came up again?",
+      "project manager check requirement",
+      "PM clarify requirement",
+      "what does that requirement mean",
+      "PM check meaning",
+      "project manager follow up requirement"
+    ],
+    "temporal": true,
+    "topics": [
+      "project requirements",
+      "project management"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116536.12,
+    "round": 1,
+    "queries": [
+      "Team ES2011's project manager said they would check what one of the new project requirements meant. What was the question, and what was the answer when it came up again?",
+      "project manager check requirement",
+      "PM clarify requirement",
+      "what does that requirement mean",
+      "PM check meaning",
+      "project manager follow up requirement"
+    ],
+    "new_chunks": 17,
+    "total_chunks": 17,
+    "meetings": [
+      "ES2011a",
+      "ES2011b",
+      "ES2011c",
+      "ES2011d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 223,
+    "top_chunks": [
+      [
+        "ES2011d-c006",
+        0.1588,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011c-c003",
+        0.1565,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011d-c007",
+        0.153,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011b-c027",
+        0.1294,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2011a-c000",
+        0.127,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2011a-c014",
+        0.0797,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2011b-c002",
+        0.0797,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2011d-c018",
+        0.0648,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116540.01,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "In meeting b, Project Manager Speaker A promised to check whether the new requirement that the remote be used only for television meant excluding DVDs or just internet functions. When the issue came up again in meeting c, Project Manager Speaker A clarified that the remote will not include DVD functionality.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116540.4,
+    "proposed": 2,
+    "valid": 1,
+    "checks": [
+      {
+        "meeting_id": "ES2011b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2011c",
+        "valid": false,
+        "error": "quote not found verbatim in transcript",
+        "snapped": false,
+        "similarity": 0.316
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116542.3,
+    "verdicts": {
+      "1": true
+    },
+    "unsupported_claims": [
+      "When the issue came up again in meeting c, Project Manager Speaker A clarified that the remote will not include DVD functionality."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116544.94,
+    "proposed": 0,
+    "added": 0,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116546.78,
+    "before": "In meeting b, Project Manager Speaker A promised to check whether the new requirement that the remote be used only for television meant excluding DVDs or just internet functions. When the issue came up again in meeting c, Project Manager Speaker A clarified that the remote will not include DVD functionality.",
+    "after": "In meeting b, Project Manager Speaker A promised to check whether the new requirement that the remote be used only for television meant excluding DVDs or just internet functions. When the issue came up again, it was apparently clarified that DVD functionality would not be included.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116546.78,
+    "answer": "In meeting b, Project Manager Speaker A promised to check whether the new requirement that the remote be used only for television meant excluding DVDs or just internet functions. When the issue came up again, it was apparently clarified that DVD functionality would not be included.",
+    "citations": [
+      {
+        "meeting_id": "ES2011b",
+        "quote": "You know actually our our new project requirements, I'm not sure if they meant o onl use only for television as in not for D_V_D_ or just not internet type things.",
+        "turn": 229,
+        "speaker": "A",
+        "supports": "Project Manager promises to check the meaning of the requirement about using the remote only for television.",
+        "supported": true
+      }
+    ],
+    "seconds": 11.4
+  }
+]

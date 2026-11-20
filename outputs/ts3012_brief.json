@@ -1,0 +1,156 @@
+{
+  "team": "TS3012",
+  "as_of": "before meeting d",
+  "meetings_used": [
+    "TS3012a",
+    "TS3012b",
+    "TS3012c"
+  ],
+  "sections": {
+    "current_decisions": [
+      {
+        "text": "The team decided to include an LCD screen in the remote control design.",
+        "owner": "Speaker A (Project Manager)",
+        "citations": [
+          {
+            "meeting_id": "TS3012c",
+            "quote": "Oh let's go for let's say because it is uh very hot in n our target group I think, we should take it take it t to consideration to build an L_C_D_ screen in it.",
+            "speaker": "A"
+          }
+        ]
+      },
+      {
+        "text": "The team decided to use regular batteries as the energy source for the remote.",
+        "owner": "Speaker A (Project Manager)",
+        "citations": [
+          {
+            "meeting_id": "TS3012c",
+            "quote": "energy, we choose regular regular batteries.",
+            "speaker": "A"
+          }
+        ]
+      },
+      {
+        "text": "The team decided to implement voice recognition functionality in the remote.",
+        "owner": "Speaker A (Project Manager)",
+        "citations": [
+          {
+            "meeting_id": "TS3012c",
+            "quote": "That's small. So we can implement it. So why why if it's small and we can imp why shouldn't we?",
+            "speaker": "A"
+          }
+        ]
+      }
+    ],
+    "decision_history": [
+      {
+        "text": "Inference: The team initially dropped the LCD screen due to power and cost concerns, but later reversed this decision to include it because it appeals to the young target group.",
+        "owner": null,
+        "citations": [
+          {
+            "meeting_id": "TS3012b",
+            "quote": "I think we should lose the L_C_D_ screen, like you said.",
+            "speaker": "A"
+          },
+          {
+            "meeting_id": "TS3012c",
+            "quote": "we should take it take it t to consideration to build an L_C_D_ screen in it.",
+            "speaker": "A"
+          }
+        ]
+      }
+    ],
+    "completed_work": [
+      {
+        "text": "Speaker C presented their design concepts including energy, shape, and materials during meeting c.",
+        "owner": "Speaker C (User Interface Designer)",
+        "citations": [
+          {
+            "meeting_id": "TS3012c",
+            "quote": "Let's see where my presentation is. Okay, um this I mentioned before.",
+            "speaker": "C"
+          }
+        ]
+      },
+      {
+        "text": "Speaker D presented the results of the market investigation during meeting c.",
+        "owner": "Speaker D (Marketing Expert)",
+        "citations": [
+          {
+            "meeting_id": "TS3012c",
+            "quote": "Okay, now it must be there. Yeah, here it is. Oh yeah. Okay, uh the investigation turns out that the most appear",
+            "speaker": "D"
+          }
+        ]
+      }
+    ],
+    "open_actions": [
+      {
+        "text": "Speaker A was tasked with working on the year-end project report.",
+        "owner": "Speaker A (Project Manager)",
+        "citations": [
+          {
+            "meeting_id": "TS3012c",
+            "quote": "I'm supposed to do the little work on the year-end report. So the project report.",
+            "speaker": "A"
+          }
+        ]
+      }
+    ],
+    "disagreements": [
+      {
+        "text": "There is a disagreement regarding whether to use square or round buttons on the remote control.",
+        "owner": null,
+        "citations": [
+          {
+            "meeting_id": "TS3012c",
+            "quote": "I would prefer round. But doesn't matter, doesn't matter.",
+            "speaker": "C"
+          }
+        ]
+      }
+    ],
+    "context": [
+      {
+        "text": "The selling price was set at 25 euros with a production cost of approximately 12.5 euros.",
+        "owner": "Speaker A (Project Manager)",
+        "citations": [
+          {
+            "meeting_id": "TS3012a",
+            "quote": "Selling price, twenty five Euros. That's for you. The production price, twelve and a half Euros, approximately.",
+            "speaker": "A"
+          }
+        ]
+      },
+      {
+        "text": "The target demographic for the remote control is defined as younger people under forty.",
+        "owner": "Speaker A (Project Manager)",
+        "citations": [
+          {
+            "meeting_id": "TS3012b",
+            "quote": "This is a new product and with this new product we want to appeal to younger people, which are um the younger people were defined under forty.",
+            "speaker": "A"
+          }
+        ]
+      }
+    ]
+  },
+  "priorities": [
+    "Finalize the button shapes and exact layout for the final design presentation.",
+    "Confirm the placement of the microphone for the voice recognition feature.",
+    "Review the final project report with all team members.",
+    "Ensure all internal and external design details align with the yellow rubber concept."
+  ],
+  "dropped_uncited": [
+    {
+      "section": "current_decisions",
+      "text": "The team decided the remote control will be made of rubber to give it a spongy, fashionable feel."
+    },
+    {
+      "section": "current_decisions",
+      "text": "The team decided to make the remote control yellow to appeal to the target group of young consumers."
+    }
+  ],
+  "n_citations": 11,
+  "model": "gemini/gemini-3.5-flash-lite"
+}

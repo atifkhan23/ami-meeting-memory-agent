@@ -1,0 +1,201 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116838.03,
+    "team_id": "ES2008",
+    "meetings": [
+      "ES2008a",
+      "ES2008b",
+      "ES2008c",
+      "ES2008d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116838.03,
+    "answer_parts": [
+      "Identify who offered to look into whether the remote should only control the television",
+      "State what answer was reported back regarding the television-only buttons"
+    ],
+    "queries": [
+      "Early on, a Team ES2008 member asked whether the remote should only have buttons for the television. Who said they would look into it, and what answer was reported back?",
+      "buttons for the television",
+      "control the tv only",
+      "look into that",
+      "other appliances"
+    ],
+    "temporal": true,
+    "topics": [
+      "remote functionality",
+      "television control"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116839.28,
+    "round": 1,
+    "queries": [
+      "Early on, a Team ES2008 member asked whether the remote should only have buttons for the television. Who said they would look into it, and what answer was reported back?",
+      "buttons for the television",
+      "control the tv only",
+      "look into that",
+      "other appliances"
+    ],
+    "new_chunks": 24,
+    "total_chunks": 24,
+    "meetings": [
+      "ES2008a",
+      "ES2008b",
+      "ES2008c",
+      "ES2008d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 189,
+    "top_chunks": [
+      [
+        "ES2008a-c016",
+        0.1134,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008b-c017",
+        0.0928,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008c-c019",
+        0.0638,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008b-c016",
+        0.0597,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008c-c018",
+        0.0482,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008b-c005",
+        0.0473,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2008a-c001",
+        0.0328,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2008d-c012",
+        0.0323,
+        [
+          "bm25"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116848.28,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "In the first meeting, Speaker A (Project Manager) offered to look into whether the remote should only control the television. Later in the second meeting, it was reported back by Speaker A that management decided the remote would be designed specifically for television only.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116848.33,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "ES2008a",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2008b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116850.4,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "that management decided the remote would be designed specifically for television only"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116853.07,
+    "proposed": 1,
+    "added": 0,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116855.12,
+    "before": "In the first meeting, Speaker A (Project Manager) offered to look into whether the remote should only control the television. Later in the second meeting, it was reported back by Speaker A that management decided the remote would be designed specifically for television only.",
+    "after": "In the first meeting, the project manager offered to look into whether the remote should only control the television. Later in the second meeting, it was reported that they are focused just on television.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116855.12,
+    "answer": "In the first meeting, the project manager offered to look into whether the remote should only control the television. Later in the second meeting, it was reported that they are focused just on television.",
+    "citations": [
+      {
+        "meeting_id": "ES2008a",
+        "quote": "It's a good question. Um. I'll look into that.",
+        "turn": 76,
+        "speaker": "A",
+        "supports": "Speaker A offered to look into whether the remote should only control the television.",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2008b",
+        "quote": "Just for television. That's what we're focused on.",
+        "turn": 127,
+        "speaker": "A",
+        "supports": "It was reported back that the remote is focused solely on the television.",
+        "supported": true
+      }
+    ],
+    "seconds": 17.1
+  }
+]

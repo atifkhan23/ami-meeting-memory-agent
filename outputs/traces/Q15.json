@@ -1,0 +1,216 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116580.72,
+    "team_id": "ES2016",
+    "meetings": [
+      "ES2016a",
+      "ES2016b",
+      "ES2016c",
+      "ES2016d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116580.72,
+    "answer_parts": [
+      "The initial total cost calculated by the team",
+      "The specified budget limit for the project",
+      "The specific component removed to reduce the cost"
+    ],
+    "queries": [
+      "Team ES2016's first full costing of their design came out over budget. What total did they get, what was the limit, and which component did they remove to fix it?",
+      "ES2016 total cost calculation",
+      "budget limit for remote",
+      "cost over budget remove component",
+      "too expensive remove part",
+      "first cost estimate ES2016"
+    ],
+    "temporal": true,
+    "topics": [
+      "budget",
+      "costing",
+      "design changes"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116581.3,
+    "round": 1,
+    "queries": [
+      "Team ES2016's first full costing of their design came out over budget. What total did they get, what was the limit, and which component did they remove to fix it?",
+      "ES2016 total cost calculation",
+      "budget limit for remote",
+      "cost over budget remove component",
+      "too expensive remove part",
+      "first cost estimate ES2016"
+    ],
+    "new_chunks": 27,
+    "total_chunks": 27,
+    "meetings": [
+      "ES2016a",
+      "ES2016b",
+      "ES2016c",
+      "ES2016d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 282,
+    "top_chunks": [
+      [
+        "ES2016b-c024",
+        0.1564,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2016d-c000",
+        0.0984,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2016a-c016",
+        0.0789,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2016c-c029",
+        0.065,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2016b-c022",
+        0.0645,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2016c-c024",
+        0.0632,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "ES2016b-c023",
+        0.0609,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "ES2016d-c008",
+        0.0492,
+        [
+          "bm25",
+          "vector"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116586.52,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Project Manager (Speaker A) noted that the remote was supposed to cost 12.5 euros, and after finding they were over budget, the team removed the LCD screen to reduce the cost.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116586.55,
+    "proposed": 2,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "ES2016d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "ES2016d",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116588.65,
+    "verdicts": {
+      "1": true,
+      "2": false
+    },
+    "unsupported_claims": [
+      "after finding they were over budget, the team removed the LCD screen to reduce the cost"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116591.47,
+    "proposed": 1,
+    "added": 1,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116593.66,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "after finding they were over budget",
+      "the team removed the LCD screen to reduce the cost"
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116595.6,
+    "before": "Project Manager (Speaker A) noted that the remote was supposed to cost 12.5 euros, and after finding they were over budget, the team removed the LCD screen to reduce the cost.",
+    "after": "Project Manager Speaker A noted that the remote was supposed to cost twelve and a half Euros. Apparently, after finding they were over budget, the team removed a component to reduce the cost.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116595.6,
+    "answer": "Project Manager Speaker A noted that the remote was supposed to cost twelve and a half Euros. Apparently, after finding they were over budget, the team removed a component to reduce the cost.",
+    "citations": [
+      {
+        "meeting_id": "ES2016d",
+        "quote": "Twelve and a half Euros is what supposed to cost us.",
+        "turn": 189,
+        "speaker": "A",
+        "supports": "the specified budget limit",
+        "supported": true
+      },
+      {
+        "meeting_id": "ES2016d",
+        "quote": "Okay. So we just remove our",
+        "turn": 264,
+        "speaker": "A",
+        "supports": "after finding they were over budget, the team removed the LCD screen to reduce the cost",
+        "supported": true
+      }
+    ],
+    "seconds": 14.9
+  }
+]

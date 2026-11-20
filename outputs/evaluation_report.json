@@ -1,0 +1,624 @@
+{
+  "rows": [
+    {
+      "id": "E01",
+      "team": "IS1004",
+      "category": [
+        "rejected proposals",
+        "historical vs current",
+        "decision changes"
+      ],
+      "question": "In Team IS1004's final costing, one member wanted a rubber case. Who was it, what happened to the rubber when the team went over budget, and what was the case made of in the end?",
+      "ground_truth": "Speaker B wanted rubber (so it survives being dropped); Speakers A and D said it was too expensive. When the costing went over budget B (echoed by C) said to make it plastic instead of rubber, which brought them roughly on budget; the final case is plastic (plastic had already been recommended by C in meeting c).",
+      "answer": "Speaker B wanted a rubber case. When the team went over budget, they changed it to plastic to save money, and the final case was made of plastic.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "3/3",
+      "auto_verdict": "correct",
+      "manual_verdict": "correct",
+      "manual_note": "Names B, the switch to plastic on going over budget, and the final plastic case. Omits that A and D objected (not asked).",
+      "citations": [
+        {
+          "meeting_id": "IS1004d",
+          "quote": "Well no didn't we say we wanted to do a rubber",
+          "supported": true
+        },
+        {
+          "meeting_id": "IS1004d",
+          "quote": "Make it plastic instead of rubber. And then we're basically o on budget",
+          "supported": true
+        }
+      ],
+      "citations_valid": 2,
+      "citations_total": 2,
+      "citations_supported": 2,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 1.0,
+      "meeting_coverage": 0.5,
+      "retrieved_meetings": [
+        "IS1004a",
+        "IS1004b",
+        "IS1004c",
+        "IS1004d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 30.4,
+      "iterations": 1
+    },
+    {
+      "id": "E02",
+      "team": "ES2013",
+      "category": [
+        "decision changes",
+        "historical vs current"
+      ],
+      "question": "Which energy source did Team ES2013 converge on in their conceptual design meeting, was it kept in the final costing, and what total cost did they reach against what budget?",
+      "ground_truth": "Kinetic energy: the consensus in ES2013c was to use kinetic if at all possible; it was kept in ES2013d's costing (one kinetic unit), and the total came to 9.20 (pounds) against the 12.50 allowed.",
+      "answer": "During their conceptual design meeting, the team apparently converged on using kinetic energy. This energy source was kept in the final costing, where they reached a total cost of nine pounds and twenty pence against the allowed budget of twelve and a half.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "3/4",
+      "auto_verdict": "partial",
+      "manual_verdict": "correct",
+      "manual_note": "All four facts present; the regex missed the phrasing 'nine pounds and twenty pence'.",
+      "citations": [
+        {
+          "meeting_id": "ES2013c",
+          "quote": "So the consensus seems to be use the kinetic if it's at all possible.",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2013d",
+          "quote": "the total cost has been calculated as nine Pounds twenty out of the twelve and a half we were allowed.",
+          "supported": true
+        }
+      ],
+      "citations_valid": 2,
+      "citations_total": 2,
+      "citations_supported": 2,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 0.6666666666666666,
+      "meeting_coverage": 1.0,
+      "retrieved_meetings": [
+        "ES2013a",
+        "ES2013b",
+        "ES2013c",
+        "ES2013d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.0,
+      "iterations": 1
+    },
+    {
+      "id": "E03",
+      "team": "IS1000",
+      "category": [
+        "team member preferences",
+        "unresolved disagreements",
+        "decision changes"
+      ],
+      "question": "In Team IS1000, which speaker championed keeping an LCD screen and on what grounds, and what happened to the LCD and to speech recognition in the final costing?",
+      "ground_truth": "Speaker C argued for the LCD (proposed it in IS1000c; in IS1000d said they really want an LCD or they would not get the market). In the final costing the LCD was cut (B: we should cut the LCD screen; replaced by extra buttons) and speech recognition was also taken out because of the budget, returning to the original, on-budget version.",
+      "answer": "Speaker C (the User Interface Designer) championed keeping an LCD screen on the grounds that it is essential for browsing multiple functionalities like TV, DVD, and VOD and targeting the four million sales audience. However, in the final costing (meeting d), both the LCD screen and speech recognition were cut entirely due to budget constraints, returning the team to the basic original design.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "3/4",
+      "auto_verdict": "partial",
+      "manual_verdict": "correct",
+      "manual_note": "C, sales/market grounds ('four million sales audience'), LCD and speech recognition both cut. Regex did not accept 'sales'.",
+      "citations": [
+        {
+          "meeting_id": "IS1000c",
+          "quote": "remote with L_C_D_ display for browsing because you have multiple functionalities",
+          "supported": null
+        },
+        {
+          "meeting_id": "IS1000d",
+          "quote": "So um I I think we should we should cut the L_C_D_ screen. That that's that's my opinion.",
+          "supported": null
+        }
+      ],
+      "citations_valid": 2,
+      "citations_total": 2,
+      "citations_supported": 2,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 1.0,
+      "meeting_coverage": 1.0,
+      "retrieved_meetings": [
+        "IS1000a",
+        "IS1000b",
+        "IS1000c",
+        "IS1000d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.0,
+      "iterations": 1
+    },
+    {
+      "id": "E04",
+      "team": "TS3005",
+      "category": [
+        "decision changes",
+        "historical vs current"
+      ],
+      "question": "Team TS3005 designed an interface built around an LCD touch screen. To get within budget in their final meeting, what did they drop, and did the touch screen survive?",
+      "ground_truth": "They dropped speech recognition together with the speaker/microphone and dropped the scroll wheel; the LCD touch screen stayed (the interface had been planned in TS3005c as only an LCD screen, no buttons).",
+      "answer": "The LCD touch screen apparently survived the final budget cuts in team TS3005. To meet the budget in the final meeting, the team decided to drop the scroll wheel.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "2/3",
+      "auto_verdict": "partial",
+      "manual_verdict": "partial",
+      "manual_note": "Scroll wheel dropped and touch screen kept are right; misses that speech recognition and the speaker/microphone were dropped. The c-meeting gold turn was not retrieved.",
+      "citations": [
+        {
+          "meeting_id": "TS3005d",
+          "quote": "Okay, so we lose the scroll wheel, the s",
+          "supported": true
+        },
+        {
+          "meeting_id": "TS3005d",
+          "quote": "so tha actually you could make an L_C_D_ screen but no mic, or it could make mic but no L_C_D_ screen,",
+          "supported": true
+        }
+      ],
+      "citations_valid": 2,
+      "citations_total": 2,
+      "citations_supported": 2,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 0.6666666666666666,
+      "meeting_coverage": 0.5,
+      "retrieved_meetings": [
+        "TS3005a",
+        "TS3005b",
+        "TS3005c",
+        "TS3005d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.0,
+      "iterations": 1
+    },
+    {
+      "id": "E05",
+      "team": "IS1006",
+      "category": [
+        "who made a commitment",
+        "action ownership",
+        "commitment follow-up"
+      ],
+      "question": "In Team IS1006's second meeting, Speaker B asked for research into whether people really need to jump to high channel numbers. Who said they would look into it, and was an answer reported back in a later meeting?",
+      "ground_truth": "Speaker D said they would have a look / check in their department for a specialist. No report-back of that research appears in IS1006c or IS1006d (not followed up in the transcripts).",
+      "answer": "In the second meeting, Speaker D offered to check in their department regarding user channel-switching habits, and apparently no follow-up report was ever provided in a later meeting.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "1/2",
+      "auto_verdict": "partial",
+      "manual_verdict": "correct",
+      "manual_note": "D, and correctly states no follow-up was reported; regex missed 'no follow-up report'.",
+      "citations": [
+        {
+          "meeting_id": "IS1006b",
+          "quote": "Well I could could uh have a look at that maybe. I'll check in my department if there's someone specialist in that.",
+          "supported": true
+        }
+      ],
+      "citations_valid": 1,
+      "citations_total": 1,
+      "citations_supported": 1,
+      "gold_evidence_found_in_corpus": 2,
+      "gold_evidence_total": 2,
+      "retrieval_recall": 1.0,
+      "meeting_coverage": 1.0,
+      "retrieved_meetings": [
+        "IS1006a",
+        "IS1006b",
+        "IS1006c",
+        "IS1006d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.2,
+      "iterations": 1
+    },
+    {
+      "id": "E06",
+      "team": "ES2015",
+      "category": [
+        "team member preferences",
+        "unresolved disagreements",
+        "decision changes"
+      ],
+      "question": "In Team ES2015, which speaker found the fruit-and-vegetable trend a strange idea for a remote, how did another member propose adapting it, and how did the fruit theme show up in the final design?",
+      "ground_truth": "Speaker A found fruit and vegetables a strange idea for a remote (ES2015c); Speaker B proposed a more abstract design stripped down to the basic shapes of fruits and vegetables; A then agreed to stick with the fruit and veggie theme. In ES2015d the design was mango-shaped and the colour combinations were named after fruits (e.g. banana black and yellow).",
+      "answer": "In Meeting C, Speaker A found the fruit and vegetable trend a strange idea for a remote control, and Speaker B proposed adapting it by using more abstract designs based on basic shapes. The fruit theme apparently showed up in the final design through color combinations named after different fruit like banana and watermelon.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "3/3",
+      "auto_verdict": "correct",
+      "manual_verdict": "correct",
+      "manual_note": "",
+      "citations": [
+        {
+          "meeting_id": "ES2015c",
+          "quote": "um, do, according to our plans already, given the market. But fruits and vegetables seems a very strange idea for a remote control.",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2015c",
+          "quote": "I think we possibly could take a more abstract design. Like look at the basic shapes of different fruits and vegetables. And then just really like strip it down to like really basic shapes.",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2015d",
+          "quote": "Um and we're thinking to carry-on with the fruit and vegetable theme, the colour um combination just could just be named after different fruit, like banana could be black and yellow, watermelon red and green, or vanilla might be the most popular if it just uh blends in more settled cream instead of the others are all a bit garish.",
+          "supported": true
+        }
+      ],
+      "citations_valid": 3,
+      "citations_total": 3,
+      "citations_supported": 3,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 1.0,
+      "meeting_coverage": 1.0,
+      "retrieved_meetings": [
+        "ES2015a",
+        "ES2015b",
+        "ES2015c",
+        "ES2015d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.0,
+      "iterations": 1
+    },
+    {
+      "id": "E07",
+      "team": "ES2005",
+      "category": [
+        "rejected proposals",
+        "cross-meeting references"
+      ],
+      "question": "Team ES2005 discussed an 'easy finder' gimmick. What form was first suggested and by whom, what concern did the project manager raise, what alternative did another member suggest, and did speech technology end up in the final design?",
+      "ground_truth": "Speaker D suggested an easy finder with a whistle function (ES2005b); Speaker A asked whether anyone had researched how many people can whistle; Speaker C suggested voice recognition instead, e.g. saying 'where are you?'. In the final evaluation (ES2005d) A said the remote has the latest trends in speech technology but no screen.",
+      "answer": "Speaker D (User Interface Designer) first suggested a whistle-activated easy finder feature, and the project manager (Speaker C) raised the concern that a loud movie would cause the remote to constantly beep. Another member apparently suggested an alternative, and speech technology ultimately ended up in the final design.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "4/4",
+      "auto_verdict": "correct",
+      "manual_verdict": "partial",
+      "manual_note": "Regex too lenient. Whistle finder by D is right and speech tech is in the design, but it labels Speaker C as project manager from a noisy role table, cites C's loud-movie concern instead of A's 'how many people can whistle' concern, and leaves the voice-recognition alternative vague.",
+      "citations": [
+        {
+          "meeting_id": "ES2005a",
+          "quote": "and as you say, we need to have some kind of gimmick, so um I thought maybe something like if you lose it and you can whistle, you know those things?",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2005b",
+          "quote": "surely that would have to be um sort of specific rather than above a threshold 'cause if you had a loud movie on you're likely to get it beeping back at you.",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2005b",
+          "quote": "Excellent, so we'll go with speech recognition, yeah?",
+          "supported": true
+        }
+      ],
+      "citations_valid": 3,
+      "citations_total": 3,
+      "citations_supported": 2,
+      "gold_evidence_found_in_corpus": 4,
+      "gold_evidence_total": 4,
+      "retrieval_recall": 1.0,
+      "meeting_coverage": 0.5,
+      "retrieved_meetings": [
+        "ES2005a",
+        "ES2005b",
+        "ES2005c",
+        "ES2005d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 0.8,
+      "iterations": 1
+    },
+    {
+      "id": "E08",
+      "team": "ES2005",
+      "category": [
+        "unresolved disagreements",
+        "team member preferences"
+      ],
+      "question": "Who in Team ES2005 proposed a banana-shaped remote, who was sceptical of the fruit idea, and was that scepticism still present at the final evaluation?",
+      "ground_truth": "Speaker A proposed the banana-shaped remote (ES2005c); Speaker D said they were not sure about the banana idea and C was sarcastic about fruit; at the final evaluation (ES2005d) Speaker C was still not 'swallowing the fruit' and would have liked an LCD screen, so the disagreement remained.",
+      "answer": "Speaker A apparently proposed a banana-shaped remote in meeting c, while Speaker D was sceptical of the fruit idea, but this scepticism was no longer present by meeting d when they presented a banana-based prototype.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "2/3",
+      "auto_verdict": "partial",
+      "manual_verdict": "partial",
+      "manual_note": "A proposed and D was sceptical are right, but the temporal conclusion is wrong: it says the scepticism was gone by meeting d, while Speaker C was still 'not swallowing the fruit' at the final evaluation.",
+      "citations": [
+        {
+          "meeting_id": "ES2005c",
+          "quote": "Yeah. y I'm I'm not sure about the banana idea.",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2005d",
+          "quote": "So there we go and and um we have the banana-based one too.",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2005d",
+          "quote": "like we are having one banana design and the other one is orange, and Uh yeah, lower end.",
+          "supported": true
+        }
+      ],
+      "citations_valid": 3,
+      "citations_total": 3,
+      "citations_supported": 3,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 1.0,
+      "meeting_coverage": 1.0,
+      "retrieved_meetings": [
+        "ES2005a",
+        "ES2005b",
+        "ES2005c",
+        "ES2005d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.1,
+      "iterations": 1
+    },
+    {
+      "id": "E09",
+      "team": "ES2012",
+      "category": [
+        "three or more meetings",
+        "decision changes"
+      ],
+      "question": "Trace Team ES2012's voice-recognition idea: who first floated a remote with no buttons using voice recognition, what risk did the designer raise in the next meeting, and was voice control in the final design?",
+      "ground_truth": "Speaker A floated a remote with no buttons at all via voice recognition (ES2012b). In ES2012c Speaker B warned the voice technology was not highly developed / still experimental; A nonetheless confirmed it will have voice recognition. In ES2012d the final remote has a microphone for voice commands (and a speech 'where are you' function), alongside a few buttons.",
+      "answer": "Speaker A (Project Manager) first floated a remote control with no buttons using voice recognition in meeting b. In the next meeting (meeting c), the Industrial Designer raised the risk that the voice technology was still in an experimental form and not well developed. Voice control was included in the final design as part of a dual-function setup alongside essential physical buttons.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "3/3",
+      "auto_verdict": "correct",
+      "manual_verdict": "correct",
+      "manual_note": "Three-meeting trail fully right.",
+      "citations": [
+        {
+          "meeting_id": "ES2012b",
+          "quote": "I wonder whether we could get the remote control with no buttons at all if we went for voice recognition,",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2012c",
+          "quote": "the voice technology is not really highly developed, it's sort of still still in an ex experimental form,",
+          "supported": true
+        },
+        {
+          "meeting_id": "ES2012d",
+          "quote": "the voice sensor is is expensive but we we made a a basic decision that that was absolutely fundamental to the to the design",
+          "supported": true
+        }
+      ],
+      "citations_valid": 3,
+      "citations_total": 3,
+      "citations_supported": 3,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 1.0,
+      "meeting_coverage": 1.0,
+      "retrieved_meetings": [
+        "ES2012a",
+        "ES2012b",
+        "ES2012c",
+        "ES2012d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.4,
+      "iterations": 1
+    },
+    {
+      "id": "E10",
+      "team": "IS1001",
+      "category": [
+        "indirect references",
+        "cross-meeting references"
+      ],
+      "question": "At the start of Team IS1001's final meeting, the project manager costed 'the aspect discussed last time'. What design did that refer to, and what did it cost against the limit?",
+      "ground_truth": "It referred to the concept agreed in IS1001c: a standard battery, a yellow banana-shaped case with a spongy rubber cover, and a wheel; the cost came to 10.7 Euros against the 12.5 Euro limit.",
+      "answer": "At the start of the final meeting, Project Manager A costed the design aspects discussed previously, which included a standard battery, a yellow banana-shaped case with a rubber spongy material, and a wheel. This design cost 10.7 Euros, which was within the 12.5 Euro budget limit.",
+      "answerable": true,
+      "abstained": false,
+      "facts_hit": "4/4",
+      "auto_verdict": "correct",
+      "manual_verdict": "correct",
+      "manual_note": "Indirect reference resolved to the c-meeting concept; 10.7 vs 12.5 correct.",
+      "citations": [
+        {
+          "meeting_id": "IS1001d",
+          "quote": "so I look at the aspect discussed last time, that is to say uh to have a standard battery, to have a yellow banana shaped uh case with uh a rubber material around it to be uh to feel spongy,",
+          "supported": true
+        },
+        {
+          "meeting_id": "IS1001d",
+          "quote": "and uh also at the different aspect like having a wheel etcetera. And the cost ended to be ten point seven Euros.",
+          "supported": true
+        },
+        {
+          "meeting_id": "IS1001d",
+          "quote": "So which is uh good, because we had a price gap of twelve point five Euros.",
+          "supported": true
+        }
+      ],
+      "citations_valid": 3,
+      "citations_total": 3,
+      "citations_supported": 3,
+      "gold_evidence_found_in_corpus": 3,
+      "gold_evidence_total": 3,
+      "retrieval_recall": 0.6666666666666666,
+      "meeting_coverage": 0.5,
+      "retrieved_meetings": [
+        "IS1001a",
+        "IS1001b",
+        "IS1001c",
+        "IS1001d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 1.1,
+      "iterations": 1
+    },
+    {
+      "id": "E11",
+      "team": "IS1005",
+      "category": [
+        "abstention"
+      ],
+      "question": "What final production cost did Team IS1005 report in their meeting d?",
+      "ground_truth": "Cannot be answered: IS1005 has no meeting d in the corpus (only IS1005a-c). The agent should say the evidence is unavailable rather than invent a figure.",
+      "answer": "Team IS1005 reported a maximum production cost of 12.50 Euros per unit, initially proposed in meeting a and apparently reiterated by Speaker D in meeting b.",
+      "answerable": false,
+      "abstained": false,
+      "facts_hit": "0/1",
+      "auto_verdict": "incorrect",
+      "manual_verdict": "incorrect",
+      "manual_note": "Abstention failure: IS1005 has no meeting d, but the agent answered with the 12.50 budget target from meetings a/b instead of saying meeting d is missing.",
+      "citations": [
+        {
+          "meeting_id": "IS1005a",
+          "quote": "We expect a production cost of maximum uh twelve point fifty Euro.",
+          "supported": true
+        },
+        {
+          "meeting_id": "IS1005b",
+          "quote": "And our production cost of twelve fifty Euros per per unit is fairly high I think,",
+          "supported": true
+        }
+      ],
+      "citations_valid": 2,
+      "citations_total": 2,
+      "citations_supported": 2,
+      "gold_evidence_found_in_corpus": 0,
+      "gold_evidence_total": 0,
+      "retrieval_recall": null,
+      "meeting_coverage": null,
+      "retrieved_meetings": [
+        "IS1005a",
+        "IS1005b",
+        "IS1005c"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 0.8,
+      "iterations": 1
+    },
+    {
+      "id": "E12",
+      "team": "IS1006",
+      "category": [
+        "abstention",
+        "false premise"
+      ],
+      "question": "Why did Team IS1006 choose a wooden case for their remote control?",
+      "ground_truth": "False premise: wood is never mentioned in any IS1006 transcript. The agent should say there is no evidence of a wooden case.",
+      "answer": "Team IS1006 apparently did not choose a wooden case, instead deciding to stick to titanium because it is a modern material.",
+      "answerable": false,
+      "abstained": false,
+      "facts_hit": "1/1",
+      "auto_verdict": "correct",
+      "manual_verdict": "correct",
+      "manual_note": "Rejected the false premise (no wooden case; titanium).",
+      "citations": [
+        {
+          "meeting_id": "IS1006d",
+          "quote": "But we still didn't want to go far from our titanium idea, 'cause it's the most of the moder the m the modern material we can p select.",
+          "supported": true
+        },
+        {
+          "meeting_id": "IS1006d",
+          "quote": "Material, we want to stick to titanium. We will send, we want to",
+          "supported": true
+        }
+      ],
+      "citations_valid": 2,
+      "citations_total": 2,
+      "citations_supported": 2,
+      "gold_evidence_found_in_corpus": 0,
+      "gold_evidence_total": 0,
+      "retrieval_recall": null,
+      "meeting_coverage": null,
+      "retrieved_meetings": [
+        "IS1006b",
+        "IS1006c",
+        "IS1006d"
+      ],
+      "models": [
+        "gemini/gemini-3.5-flash-lite"
+      ],
+      "seconds": 0.6,
+      "iterations": 1
+    }
+  ],
+  "summary": {
+    "n_questions": 12,
+    "n_answerable": 10,
+    "n_unanswerable": 2,
+    "verdicts_final": {
+      "correct": 8,
+      "partial": 3,
+      "incorrect": 1
+    },
+    "verdicts_automatic": {
+      "correct": 6,
+      "partial": 5,
+      "incorrect": 1
+    },
+    "citation_exact_match_accuracy": 1.0,
+    "citation_support_accuracy": 0.958,
+    "mean_retrieval_recall": 0.9,
+    "mean_multi_meeting_coverage": 0.8,
+    "correct_abstentions": 1,
+    "false_abstentions": 0,
+    "mean_iterations": 1.0
+  },
+  "llm_usage": {
+    "calls": 58,
+    "live_calls": 0,
+    "by_model": {
+      "gemini/gemini-3.5-flash-lite": {
+        "calls": 58,
+        "cached": 58,
+        "in": 341338,
+        "out": 9045,
+        "cost": 0.0
+      }
+    }
+  }
+}

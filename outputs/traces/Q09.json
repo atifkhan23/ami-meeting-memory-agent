@@ -1,0 +1,231 @@
+[
+  {
+    "stage": "scope",
+    "t": 1795116432.84,
+    "team_id": "IS1002",
+    "meetings": [
+      "IS1002b",
+      "IS1002c",
+      "IS1002d"
+    ]
+  },
+  {
+    "stage": "intent",
+    "t": 1795116432.84,
+    "answer_parts": [
+      "Initial selling price discussed by team IS1002",
+      "Final price range settled upon by team IS1002",
+      "Speaker who advocated for a higher, more exclusive price"
+    ],
+    "queries": [
+      "What selling price was Team IS1002 working with at first, what price range did they settle on later, and which speaker pushed hardest for a higher, more exclusive price?",
+      "IS1002 selling price",
+      "IS1002 price range",
+      "IS1002 expensive remote",
+      "IS1002 cost of the remote",
+      "IS1002 price decision"
+    ],
+    "temporal": true,
+    "topics": [
+      "selling price",
+      "marketing strategy"
+    ]
+  },
+  {
+    "stage": "retrieval",
+    "t": 1795116433.43,
+    "round": 1,
+    "queries": [
+      "What selling price was Team IS1002 working with at first, what price range did they settle on later, and which speaker pushed hardest for a higher, more exclusive price?",
+      "IS1002 selling price",
+      "IS1002 price range",
+      "IS1002 expensive remote",
+      "IS1002 cost of the remote",
+      "IS1002 price decision"
+    ],
+    "new_chunks": 24,
+    "total_chunks": 24,
+    "meetings": [
+      "IS1002b",
+      "IS1002c",
+      "IS1002d"
+    ],
+    "memory_records": 40,
+    "evidence_turns": 199,
+    "top_chunks": [
+      [
+        "IS1002b-c021",
+        0.1201,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1002c-c036",
+        0.1091,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1002b-c020",
+        0.1079,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1002b-c037",
+        0.0771,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1002c-c035",
+        0.0653,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1002b-c050",
+        0.0636,
+        [
+          "bm25",
+          "vector"
+        ]
+      ],
+      [
+        "IS1002d-c010",
+        0.0627,
+        [
+          "bm25"
+        ]
+      ],
+      [
+        "IS1002b-c022",
+        0.0616,
+        [
+          "bm25",
+          "vector"
+        ]
+      ]
+    ]
+  },
+  {
+    "stage": "assessment",
+    "t": 1795116436.33,
+    "round": 1,
+    "sufficient": true,
+    "missing": "",
+    "follow_up": [],
+    "draft_answer": "Team IS1002 initially worked with a selling price of 25 Euros. Later, they settled on a sales price bracket of 35 to 50 Euros. Speaker D (the Marketing Expert) pushed hardest for a higher, more exclusive price.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "citation_validation",
+    "t": 1795116436.73,
+    "proposed": 3,
+    "valid": 2,
+    "checks": [
+      {
+        "meeting_id": "IS1002b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      },
+      {
+        "meeting_id": "IS1002c",
+        "valid": false,
+        "error": "quote not found verbatim in transcript",
+        "snapped": false,
+        "similarity": 0.296
+      },
+      {
+        "meeting_id": "IS1002b",
+        "valid": true,
+        "error": "",
+        "snapped": false,
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116438.86,
+    "verdicts": {
+      "1": true,
+      "2": true
+    },
+    "unsupported_claims": [
+      "Later, they settled on a sales price bracket of 35 to 50 Euros.",
+      "Speaker D (the Marketing Expert) pushed hardest for a higher, more exclusive price."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "add_evidence",
+    "t": 1795116441.4,
+    "proposed": 2,
+    "added": 1,
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "support_check",
+    "t": 1795116443.3,
+    "verdicts": {
+      "1": true,
+      "2": true,
+      "3": true
+    },
+    "unsupported_claims": [
+      "Speaker D (the Marketing Expert) pushed hardest for a higher, more exclusive price."
+    ],
+    "judge": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "revise",
+    "t": 1795116445.61,
+    "before": "Team IS1002 initially worked with a selling price of 25 Euros. Later, they settled on a sales price bracket of 35 to 50 Euros. Speaker D (the Marketing Expert) pushed hardest for a higher, more exclusive price.",
+    "after": "Team IS1002 initially worked with a selling price of twenty-five Euros and later settled on a price range of thirty-five to fifty Euros. Speaker D apparently pushed hardest for a higher, more exclusive price.",
+    "model": "gemini-3.5-flash-lite"
+  },
+  {
+    "stage": "final",
+    "t": 1795116445.61,
+    "answer": "Team IS1002 initially worked with a selling price of twenty-five Euros and later settled on a price range of thirty-five to fifty Euros. Speaker D apparently pushed hardest for a higher, more exclusive price.",
+    "citations": [
+      {
+        "meeting_id": "IS1002b",
+        "quote": "Twenty-five Euros is the selling price, we really have to innovate here I guess.",
+        "turn": 18,
+        "speaker": "A",
+        "supports": "Initial selling price discussed by team IS1002",
+        "supported": true
+      },
+      {
+        "meeting_id": "IS1002b",
+        "quote": "Well, see I I see I I'm an advocate to make this an exclusive product.",
+        "turn": 175,
+        "speaker": "D",
+        "supports": "Speaker who advocated for a higher, more exclusive price",
+        "supported": true
+      },
+      {
+        "meeting_id": "IS1002d",
+        "quote": "marketable I believe at a cost of of of thirty thirty five to to fifty Euros.",
+        "turn": 107,
+        "speaker": "D",
+        "supports": "Later, they settled on a sales price bracket of 35 to 50 Euros.",
+        "supported": true
+      }
+    ],
+    "seconds": 12.8
+  }
+]
